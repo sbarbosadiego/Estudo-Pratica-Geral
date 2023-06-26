@@ -1,0 +1,12 @@
+nome = input('Qual é seu nome? ')
+idade = input('Qual a sua idade? ')
+dia = input('Em que dia você nasceu? ')
+mes = input('E em qual mês? ')
+ano = input('De qual ano? ')
+print('Bem vindo {}!, você tem {} anos, você nasceu em {} de {} no ano de {}, muito loco em'.format(nome, idade, dia, mes, ano))
+valor1 = input('Insira um número ')
+valor2 = input('Agora outro ')
+valor1 = int(valor1)
+valor2 = int(valor2)
+s = valor1+valor2
+print('O Total de {} e {} é {}'.format(valor1, valor2, s))
