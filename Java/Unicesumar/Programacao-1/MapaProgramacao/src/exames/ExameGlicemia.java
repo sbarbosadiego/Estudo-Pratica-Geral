@@ -9,10 +9,14 @@ public class ExameGlicemia extends Exame {
         this.quantidadeGlicose = quantidadeGlicose;
     }
     
+    /**
+     * Método para retornar nível glicêmico.
+     * @return String
+     */
     public String classificarResultado() {
-        if (quantidadeGlicose < 100) {
+        if (this.quantidadeGlicose < 100) {
             return "Normoglicemia";
-        } else if (quantidadeGlicose >= 100 && quantidadeGlicose < 126) {
+        } else if (this.quantidadeGlicose >= 100 && this.quantidadeGlicose < 126) {
             return "Pré-diabetes";
         } else {
             return "Diabetes estabelecido";
@@ -20,8 +24,8 @@ public class ExameGlicemia extends Exame {
     }
 
     public void mostrarResultado() {
-        String classificacao = classificarResultado();
-        System.out.println("Glicemia: " + quantidadeGlicose + " mg/dL - " + classificacao);
+        String classificacao = this.classificarResultado();
+        System.out.println("Glicemia: " + this.quantidadeGlicose + " mg/dL - " + classificacao);
     } 
     
         

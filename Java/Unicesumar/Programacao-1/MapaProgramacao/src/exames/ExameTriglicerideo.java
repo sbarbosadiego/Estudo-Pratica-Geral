@@ -8,7 +8,11 @@ public class ExameTriglicerideo extends Exame {
         super(nome, tipoSanguineo, anoNascimento);
         this.quantidadeTriglicerideos = quantidadeTriglicerideos;
     }
-
+    
+    /**
+     * 
+     * @return 
+     */
     public String classificarResultado() {
         int limite = 0;
         int idade = this.anoNascimento - 2023;
@@ -20,7 +24,7 @@ public class ExameTriglicerideo extends Exame {
             limite = 150;
         }
 
-        if (quantidadeTriglicerideos < limite) {
+        if (this.quantidadeTriglicerideos < limite) {
             return "Normal";
         } else {
             return "Elevado";
@@ -28,8 +32,8 @@ public class ExameTriglicerideo extends Exame {
     }
 
     public void mostrarResultado() {
-        String classificacao = classificarResultado();
-        System.out.println("Triglicerídeos: " + quantidadeTriglicerideos + " mg/dL - " + classificacao);
+        String classificacao = this.classificarResultado();
+        System.out.println("Triglicerídeos: " + this.quantidadeTriglicerideos + " mg/dL - " + classificacao);
     }
     
 }
