@@ -10,12 +10,13 @@ public class ExameTriglicerideo extends Exame {
     }
     
     /**
-     * 
-     * @return 
+     * Método para retornar classificação Triglicerídeo.
+     * @return String
      */
     public String classificarResultado() {
         int limite = 0;
         int idade = this.anoNascimento - 2023;
+        
         if (idade <= 9) {
             limite = 75;
         } else if (idade <= 19) {
@@ -25,9 +26,9 @@ public class ExameTriglicerideo extends Exame {
         }
 
         if (this.quantidadeTriglicerideos < limite) {
-            return "Normal";
+            return "BOM";
         } else {
-            return "Elevado";
+            return "RUIM";
         }
     }
 

@@ -19,19 +19,21 @@ public class ExameColesterol extends Exame {
      */
     public String classificarResultado() {
         String hdlClassificacao = "";
-        if (this.anoNascimento >= 20) {
-            hdlClassificacao = (this.quantidadeHDL > 40) ? "HDL - BOM" : "HDL - BAIXO";
-        } else {
-            hdlClassificacao = (this.quantidadeHDL > 45) ? "HDL - BOM" : "HDL - BAIXO";
-        }
-
         String ldlClassificacao = "";
+        int idade = this.anoNascimento - 2023;
+        
+        if (idade <= 19) {
+            hdlClassificacao = (this.quantidadeHDL > 45) ? "HDL - BOM" : "HDL - RUIM";
+        } else if (idade > 19 ) {
+            hdlClassificacao = (this.quantidadeHDL > 40) ? "HDL - BOM" : "HDL - RUIM";
+        }
+               
         if (this.riscoPaciente == 'B') {
-            ldlClassificacao = (this.quantidadeLDL < 100) ? "LDL - BOM" : "LDL - ALTO";
+            ldlClassificacao = (this.quantidadeLDL < 100) ? "LDL - BOM" : "LDL - RUIM";
         } else if (this.riscoPaciente == 'M') {
-            ldlClassificacao = (this.quantidadeLDL < 70) ? "LDL - BOM" : "LDL - ALTO";
+            ldlClassificacao = (this.quantidadeLDL < 70) ? "LDL - BOM" : "LDL - RUIM";
         } else {
-            ldlClassificacao = (this.quantidadeLDL < 50) ? "LDL - BOM" : "LDL - ALTO";
+            ldlClassificacao = (this.quantidadeLDL < 50) ? "LDL - BOM" : "LDL - RUIM";
         }
 
         return hdlClassificacao + " | " + ldlClassificacao;
