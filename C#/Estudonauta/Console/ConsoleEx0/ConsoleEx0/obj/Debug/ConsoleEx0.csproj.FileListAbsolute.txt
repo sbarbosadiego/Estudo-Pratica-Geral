@@ -1,0 +1,7 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\ConsoleEx0\ConsoleEx0\bin\Debug\ConsoleEx0.exe.config
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\ConsoleEx0\ConsoleEx0\bin\Debug\ConsoleEx0.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\ConsoleEx0\ConsoleEx0\bin\Debug\ConsoleEx0.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\ConsoleEx0\ConsoleEx0\obj\Debug\ConsoleEx0.csproj.AssemblyReference.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\ConsoleEx0\ConsoleEx0\obj\Debug\ConsoleEx0.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\ConsoleEx0\ConsoleEx0\obj\Debug\ConsoleEx0.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\ConsoleEx0\ConsoleEx0\obj\Debug\ConsoleEx0.pdb
