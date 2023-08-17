@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfEx0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfEx0"
+        mc:Ignorable="d"
+        Title="Janela" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnClick" Content="Click" HorizontalAlignment="Left" Height="80" Margin="220,304,0,0" VerticalAlignment="Top" Width="159" FontSize="30" Click="btnClick_Click"/>
+        <Label x:Name="lblMensagem" Content="" HorizontalAlignment="Left" Height="72" Margin="19,23,0,0" VerticalAlignment="Top" Width="759" HorizontalContentAlignment="Center" FontSize="38"/>
+        <Button x:Name="lblLimpar" Content="Clear" HorizontalAlignment="Left" Height="80" Margin="422,304,0,0" VerticalAlignment="Top" Width="160" FontSize="30" Click="lblLimpar_Click"/>
+
+    </Grid>
+</Window>

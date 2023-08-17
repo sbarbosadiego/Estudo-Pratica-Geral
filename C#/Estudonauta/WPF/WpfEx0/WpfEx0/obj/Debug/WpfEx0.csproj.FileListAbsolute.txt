@@ -1,0 +1,15 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\bin\Debug\WpfEx0.exe.config
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\bin\Debug\WpfEx0.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\bin\Debug\WpfEx0.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\WpfEx0.csproj.AssemblyReference.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\MainWindow.g.cs
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\App.g.cs
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\WpfEx0_MarkupCompile.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\WpfEx0_MarkupCompile.lref
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\MainWindow.baml
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\WpfEx0.g.resources
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\WpfEx0.Properties.Resources.resources
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\WpfEx0.csproj.GenerateResource.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\WpfEx0.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\WpfEx0.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\WPF\WpfEx0\WpfEx0\obj\Debug\WpfEx0.pdb
