@@ -1,0 +1,7 @@
+\n - Nova Linha
+\t - Tabulação
+\b - Backspace
+\r - Retorno
+\a - Alerta
+\\ - Barras
+\" - Aspas
