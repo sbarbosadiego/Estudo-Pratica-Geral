@@ -1,0 +1,7 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A3\bin\Debug\M1A3.exe.config
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A3\bin\Debug\M1A3.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A3\bin\Debug\M1A3.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A3\obj\Debug\M1A3.csproj.AssemblyReference.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A3\obj\Debug\M1A3.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A3\obj\Debug\M1A3.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A3\obj\Debug\M1A3.pdb
