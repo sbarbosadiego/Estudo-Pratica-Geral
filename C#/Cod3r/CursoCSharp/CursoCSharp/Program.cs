@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using CursoCSharp.Fundamentos;
 
 namespace CursoCSharp
 {
@@ -10,8 +9,11 @@ namespace CursoCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            var central = new CentralDeExercicios(new Dictionary<string, Action>() {
+                {"Primeiro Programa - Fundamentos", PrimeiroPrograma.Executar},
+            });
+
+            central.SelecionarEExecutar();
         }
     }
 }
