@@ -29,7 +29,6 @@ public class SegundoPrograma {
 		
 		JOptionPane.showInternalMessageDialog(null, "Olá "+nome+" "+sobrenome+" você tem "+idade+" anos de idade");
 		
-
 	}
 
 }
