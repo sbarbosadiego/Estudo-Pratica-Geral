@@ -34,7 +34,7 @@ public class ViewLogin extends javax.swing.JFrame {
         btnEntrar = new javax.swing.JButton();
         btnCadastrarUsuario = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -79,7 +79,7 @@ public class ViewLogin extends javax.swing.JFrame {
                     .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnEntrar)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(btnCadastrarUsuario)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
