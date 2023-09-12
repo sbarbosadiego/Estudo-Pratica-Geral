@@ -32,7 +32,7 @@ public class ConexaoMySql {
     private static Properties loadProperties() {
         try {
             Properties prop = new Properties();
-            String caminho = "/db.properties";
+            String caminho = "db.properties";
             prop.load(ConexaoMySql.class.getResourceAsStream(caminho));
             return prop;
         } catch (IOException e) {

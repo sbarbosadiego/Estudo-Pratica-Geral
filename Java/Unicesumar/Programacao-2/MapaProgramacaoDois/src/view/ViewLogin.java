@@ -4,12 +4,20 @@
  */
 package view;
 
+import controller.ControllerUsuario;
+import javax.swing.JOptionPane;
+import model.ModelUsuario;
+
 /**
  *
  * @author Diego Barbosa da Silva
  */
 public class ViewLogin extends javax.swing.JFrame {
-
+    
+    
+    ControllerUsuario controllerUsuario = new ControllerUsuario();
+    ModelUsuario modelUsuario = new ModelUsuario();
+    
     /**
      * Creates new form ViewLogin
      */
@@ -34,7 +42,7 @@ public class ViewLogin extends javax.swing.JFrame {
         btnEntrar = new javax.swing.JButton();
         btnCadastrarUsuario = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -45,6 +53,11 @@ public class ViewLogin extends javax.swing.JFrame {
 
         btnEntrar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnEntrar.setText("Entrar");
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrarActionPerformed(evt);
+            }
+        });
 
         btnCadastrarUsuario.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnCadastrarUsuario.setText("Cadastrar Novo Usuário");
@@ -100,6 +113,23 @@ public class ViewLogin extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        modelUsuario.setLogin(this.jtfLogin.getText());
+        modelUsuario.setSenha(String.valueOf(this.jtfSenha.getPassword()));
+        if (this.jtfLogin.getText().isEmpty() || String.valueOf(this.jtfSenha.getPassword()).isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Digite o usuário e senha", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else {
+            if (controllerUsuario.getUsuarioController(modelUsuario)) {
+                JOptionPane.showMessageDialog(null, "Encontrado o usuário", "ATENÇÃO",
+                        JOptionPane.WARNING_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "Não foi encontrado o usuário", "ATENÇÃO",
+                        JOptionPane.WARNING_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
      * @param args the command line arguments
