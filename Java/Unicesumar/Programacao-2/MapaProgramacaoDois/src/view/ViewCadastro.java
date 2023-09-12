@@ -4,12 +4,21 @@
  */
 package view;
 
+import controller.ControllerUsuario;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+import model.ModelUsuario;
+
 /**
  *
- * @author di_an
+ * @author Diego Barbosa da Silva
  */
 public class ViewCadastro extends javax.swing.JFrame {
 
+    ControllerUsuario controllerUsuario = new ControllerUsuario();
+    ModelUsuario modelUsuario = new ModelUsuario();
+    
+    
     /**
      * Creates new form ViewCadastro
      */
@@ -38,7 +47,8 @@ public class ViewCadastro extends javax.swing.JFrame {
         btnSalvar = new javax.swing.JButton();
         jtfSenha = new javax.swing.JPasswordField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro de Usuário");
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -58,12 +68,45 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jtfNomeActionPerformed(evt);
             }
         });
+        jtfNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNomeKeyPressed(evt);
+            }
+        });
+
+        jtfLogin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfLoginKeyPressed(evt);
+            }
+        });
+
+        jtfEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfEmailKeyPressed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel5.setText("Cadastrar Novo Usuário");
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
+        btnSalvar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnSalvarKeyPressed(evt);
+            }
+        });
+
+        jtfSenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfSenhaKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -126,12 +169,75 @@ public class ViewCadastro extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfNomeActionPerformed
 
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        this.salvarUsuario();
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void jtfNomeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomeKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.jtfLogin.requestFocus();
+        }
+    }//GEN-LAST:event_jtfNomeKeyPressed
+
+    private void jtfLoginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfLoginKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.jtfSenha.requestFocus();
+        }
+    }//GEN-LAST:event_jtfLoginKeyPressed
+
+    private void jtfSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSenhaKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.jtfEmail.requestFocus();
+        }
+    }//GEN-LAST:event_jtfSenhaKeyPressed
+
+    private void jtfEmailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfEmailKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.btnSalvar.requestFocus();
+        }
+    }//GEN-LAST:event_jtfEmailKeyPressed
+
+    private void btnSalvarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnSalvarKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.salvarUsuario();
+        }
+    }//GEN-LAST:event_btnSalvarKeyPressed
+
+    private void salvarUsuario() {
+        if (this.jtfEmail.getText().isEmpty() || this.jtfNome.getText().isEmpty() || this.jtfLogin.getText().isEmpty() || this.jtfSenha.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Preencha todos os campos!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else {
+            this.modelUsuario.setNome(this.jtfNome.getText());
+            this.modelUsuario.setLogin(this.jtfLogin.getText());
+            this.modelUsuario.setSenha(this.jtfSenha.getText());
+            this.modelUsuario.setEmail(this.jtfEmail.getText());
+            if (controllerUsuario.salvarUsuarioController(modelUsuario) > 0) {
+                JOptionPane.showMessageDialog(null, "Cadastrado aluno com sucesso", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+                this.limparCampos();
+                dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Aluno não cadastrado", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }
+    
+    private void limparCampos() {
+        this.jtfNome.setText("");
+        this.jtfLogin.setText("");
+        this.jtfSenha.setText("");
+        this.jtfEmail.setText("");
+    }
+    
     /**
      * @param args the command line arguments
      */

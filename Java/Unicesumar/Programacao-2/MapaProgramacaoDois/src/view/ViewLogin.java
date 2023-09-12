@@ -5,6 +5,7 @@
 package view;
 
 import controller.ControllerUsuario;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import model.ModelUsuario;
 
@@ -43,6 +44,7 @@ public class ViewLogin extends javax.swing.JFrame {
         btnCadastrarUsuario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -51,6 +53,18 @@ public class ViewLogin extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Senha:");
 
+        jtfLogin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfLoginKeyPressed(evt);
+            }
+        });
+
+        jtfSenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfSenhaKeyPressed(evt);
+            }
+        });
+
         btnEntrar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnEntrar.setText("Entrar");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -58,9 +72,24 @@ public class ViewLogin extends javax.swing.JFrame {
                 btnEntrarActionPerformed(evt);
             }
         });
+        btnEntrar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnEntrarKeyPressed(evt);
+            }
+        });
 
         btnCadastrarUsuario.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnCadastrarUsuario.setText("Cadastrar Novo Usuário");
+        btnCadastrarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarUsuarioActionPerformed(evt);
+            }
+        });
+        btnCadastrarUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnCadastrarUsuarioKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -115,6 +144,38 @@ public class ViewLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        this.login();
+    }//GEN-LAST:event_btnEntrarActionPerformed
+
+    private void btnCadastrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarUsuarioActionPerformed
+        new ViewCadastro().setVisible(true);
+    }//GEN-LAST:event_btnCadastrarUsuarioActionPerformed
+
+    private void jtfLoginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfLoginKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.jtfSenha.requestFocus();
+        }
+    }//GEN-LAST:event_jtfLoginKeyPressed
+
+    private void jtfSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSenhaKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.btnEntrar.requestFocus();
+        }
+    }//GEN-LAST:event_jtfSenhaKeyPressed
+
+    private void btnEntrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEntrarKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.login();
+        }
+    }//GEN-LAST:event_btnEntrarKeyPressed
+
+    private void btnCadastrarUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnCadastrarUsuarioKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            new ViewCadastro().setVisible(true);
+        }
+    }//GEN-LAST:event_btnCadastrarUsuarioKeyPressed
+
+    private void login() {
         modelUsuario.setLogin(this.jtfLogin.getText());
         modelUsuario.setSenha(String.valueOf(this.jtfSenha.getPassword()));
         if (this.jtfLogin.getText().isEmpty() || String.valueOf(this.jtfSenha.getPassword()).isEmpty()) {
@@ -122,15 +183,16 @@ public class ViewLogin extends javax.swing.JFrame {
                     JOptionPane.WARNING_MESSAGE);
         } else {
             if (controllerUsuario.getUsuarioController(modelUsuario)) {
-                JOptionPane.showMessageDialog(null, "Encontrado o usuário", "ATENÇÃO",
+                JOptionPane.showMessageDialog(null, "Acesso Autorizado", "ATENÇÃO",
                         JOptionPane.WARNING_MESSAGE);
             } else {
-                JOptionPane.showMessageDialog(null, "Não foi encontrado o usuário", "ATENÇÃO",
+                JOptionPane.showMessageDialog(null, "Acesso Negado", "ATENÇÃO",
                         JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_btnEntrarActionPerformed
-
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
