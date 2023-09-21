@@ -1,0 +1,49 @@
+Modelo de Maturidade Richardson
+
+Nivel 0
+    - verbosHttp
+    - statusCode
+    - recursos (url muda de acordo com a acao)
+    - a acao da api é definida no corpo da requiscao
+    request
+    {
+        "acao": "cadastrarConta"
+        ....
+    }
+    response - statusCode 2x.x
+    {
+        "error": "Erro generico"
+    }
+
+
+Nivel 1
+    - verbosHttp
+    - statusCode
+    + recursos (/contas)
+    - a acao da api é definida no corpo da requiscao
+
+Nivel 2
+    + verbosHttp
+    + statusCode
+    + recursos (/contas)
+
+Nivel 3
+    + verbosHttp
+    + statusCode
+    + recursos (/contas)
+    + "navegaveis"/linkadas
+
+
+Status Code
+1.x.x - Informacao
+2.x.x - Sucesso
+3.x.x - Redirect
+4.x.x - Erro Cliente/negocio
+    - não mandou um atributo obrigatio
+5.x.x - Erro
+    - o que queremos evitar
+
+Idempotencia
+É a caracteristica de uma api ao receber n requisicoes passando a 
+mesma chave de idempontecia (por exemplo idempotencyId) criar o recurso
+apenas uma vez, e nas N vezes seguintes retornar o mesmo response e statusCode
