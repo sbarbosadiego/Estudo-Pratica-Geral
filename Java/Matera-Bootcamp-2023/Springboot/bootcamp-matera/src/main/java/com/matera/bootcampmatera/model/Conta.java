@@ -12,46 +12,47 @@ import lombok.Data;
 @Data
 @Builder
 @Entity // CONTA
+@Table(name = "Nome_da_minha_tabela")
 public class Conta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "numero")
     private String numeroConta; //NUMERO_CONTA
     private String agencia; // AGENCIA
 
 
-    public Conta(){
-    	
+    public Conta() {
     }
-    
+
     public Conta(Long id, String numeroConta, String agencia) {
         this.id = id;
         this.numeroConta = numeroConta;
         this.agencia = agencia;
     }
-    
+
 	public Long getId() {
 		return id;
 	}
-	
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
 	public String getNumeroConta() {
 		return numeroConta;
 	}
-	
+
 	public void setNumeroConta(String numeroConta) {
 		this.numeroConta = numeroConta;
 	}
-	
+
 	public String getAgencia() {
 		return agencia;
 	}
-	
+
 	public void setAgencia(String agencia) {
 		this.agencia = agencia;
 	}
@@ -60,9 +61,7 @@ public class Conta {
 }
 
 /**
- *                          @Component
- * @Controller              @Service            @Repository
- *
+ * @Component
+ * @Controller @Service            @Repository
  * @RestController
- *
  */
