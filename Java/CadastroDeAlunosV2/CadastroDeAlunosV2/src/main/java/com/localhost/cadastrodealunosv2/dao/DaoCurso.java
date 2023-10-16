@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package dao;
+package com.localhost.cadastrodealunosv2.dao;
 
 import conexao.ConexaoMySql;
 import java.sql.PreparedStatement;
@@ -12,8 +12,8 @@ import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import model.ModelAluno;
-import model.ModelCurso;
+import com.localhost.cadastrodealunosv2.model.ModelAluno;
+import com.localhost.cadastrodealunosv2.model.ModelCurso;
 
 /**
  * @author Diego Barbosa da Silva

@@ -2,11 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package com.localhost.cadastrodealunosv2.view;
 
-import controller.ControllerAluno;
-import controller.ControllerCurso;
-import controller.ControllerCursoAluno;
+import com.localhost.cadastrodealunosv2.controller.ControllerAluno;
+import com.localhost.cadastrodealunosv2.controller.ControllerCurso;
+import com.localhost.cadastrodealunosv2.controller.ControllerCursoAluno;
+import com.localhost.cadastrodealunosv2.model.ModelAluno;
+import com.localhost.cadastrodealunosv2.model.ModelCurso;
+import com.localhost.cadastrodealunosv2.model.ModelCursoAluno;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
@@ -16,9 +19,7 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-import model.ModelAluno;
-import model.ModelCurso;
-import model.ModelCursoAluno;
+
 
 /**
  * @author Diego Barbosa da Silva
