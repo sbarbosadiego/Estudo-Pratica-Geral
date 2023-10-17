@@ -10,11 +10,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 /**
  * @author Diego Barbosa da Silva
  */
+@Data
 @Entity(name = "alunos")
 public class ModelAluno {
     
@@ -35,23 +37,7 @@ public class ModelAluno {
     }
 
     public ModelAluno(String nome) {
-        
+        this.nomeAluno = nome;
     }
 
-    public int getCodigoAluno() {
-        return codigoAluno;
-    }
-
-    public void setCodigoAluno(int codigoAluno) {
-        this.codigoAluno = codigoAluno;
-    }
-
-    public String getNomeAluno() {
-        return nomeAluno;
-    }
-
-    public void setNomeAluno(String nomeAluno) {
-        this.nomeAluno = nomeAluno;
-    }
-    
 }

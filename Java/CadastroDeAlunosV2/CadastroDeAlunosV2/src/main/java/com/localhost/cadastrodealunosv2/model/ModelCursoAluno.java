@@ -8,10 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
+import lombok.Data;
 
 /**
  * @author Diego Barbosa da Silva
  */
+@Data
 @Entity(name = "cursos_alunos")
 public class ModelCursoAluno {
     
@@ -37,44 +39,4 @@ public class ModelCursoAluno {
     public ModelCursoAluno() {
     }
 
-    public int getCodigoCursoAluno() {
-        return codigoCursoAluno;
-    }
-
-    public void setCodigoCursoAluno(int codigoCursoAluno) {
-        this.codigoCursoAluno = codigoCursoAluno;
-    }
-
-    public ModelAluno getCodigoAluno() {
-        return codigoAluno;
-    }
-
-    public void setCodigoAluno(ModelAluno codigoAluno) {
-        this.codigoAluno = codigoAluno;
-    }
-
-    public ModelCurso getCodigoCurso() {
-        return codigoCurso;
-    }
-
-    public void setCodigoCurso(ModelCurso codigoCurso) {
-        this.codigoCurso = codigoCurso;
-    }
-
-    public String getAluno() {
-        return aluno;
-    }
-
-    public void setAluno(String aluno) {
-        this.aluno = aluno;
-    }
-
-    public String getCurso() {
-        return curso;
-    }
-
-    public void setCurso(String curso) {
-        this.curso = curso;
-    }
-    
 }

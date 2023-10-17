@@ -10,11 +10,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 /**
  * @author Diego Barbosa da Silva
  */
+@Data
 @Entity(name = "cursos")
 public class ModelCurso {
     
@@ -34,34 +36,7 @@ public class ModelCurso {
     private LocalDateTime dataCriacao;
 
     public ModelCurso() {
+        
     }
-    
-    
-    
-    public int getCodigoCurso() {
-        return codigoCurso;
-    }
-
-    public void setCodigoCurso(int codigoCurso) {
-        this.codigoCurso = codigoCurso;
-    }
-
-    public String getEmentaCurso() {
-        return ementaCurso;
-    }
-
-    public void setEmentaCurso(String ementaCurso) {
-        this.ementaCurso = ementaCurso;
-    }
-
-    public String getDescricaoCurso() {
-        return descricaoCurso;
-    }
-
-    public void setDescricaoCurso(String descricaoCurso) {
-        this.descricaoCurso = descricaoCurso;
-    }
-    
-    
     
 }
