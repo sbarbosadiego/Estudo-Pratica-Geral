@@ -4,14 +4,34 @@
  */
 package com.localhost.cadastrodealunosv2.model;
 
+import java.time.LocalDateTime;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import org.hibernate.annotations.CreationTimestamp;
+
 /**
  * @author Diego Barbosa da Silva
  */
+@Entity(name = "cursos")
 public class ModelCurso {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "pk_codigo_curso")
     private int codigoCurso;
+    
+    @Column(name = "curso_ementa")
     private String ementaCurso;
+    
+    @Column(name = "curso_descricao", length = 50, nullable = false)
     private String descricaoCurso;
+    
+    @CreationTimestamp
+    @Column(name = "data_cadastro")
+    private LocalDateTime dataCriacao;
 
     public ModelCurso() {
     }
