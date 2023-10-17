@@ -20,7 +20,7 @@ public class ModelCursoAluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pk_codigo")
-    private int codigoCursoAluno;
+    private Long codigoCursoAluno;
     
     @ManyToOne
     @JoinColumn(name = "fk_aluno", referencedColumnName = "pk_codigo_aluno")

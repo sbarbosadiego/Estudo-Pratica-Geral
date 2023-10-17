@@ -23,7 +23,7 @@ public class ModelAluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pk_codigo_aluno")
-    private int codigoAluno;
+    private Long codigoAluno;
     
     @Column(name = "aluno_nome", length = 50, nullable = false)
     private String nomeAluno;
