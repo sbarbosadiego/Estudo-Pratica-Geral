@@ -44,7 +44,7 @@ public class Conexao {
         }
         */
         
-        /* Segunda forma de ser feito a consulta
+        //* Segunda forma de ser feito a consulta
         List<ModelAluno> alunos = entityManager
                 .createQuery("SELECT u FROM alunos u", ModelAluno.class)
                 .setMaxResults(10)
@@ -53,7 +53,7 @@ public class Conexao {
         for(ModelAluno aluno: alunos) {
             System.out.println(aluno.toString());
         }
-        */
+        //
         
         
         entityManager.close();

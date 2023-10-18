@@ -37,6 +37,7 @@ public class ModelCursoAluno {
     private String curso;
 
     public ModelCursoAluno() {
+        
     }
 
 }
