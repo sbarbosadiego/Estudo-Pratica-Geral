@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+:root {
+    --fonte-Padrao: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --cor-DeFundo: #3c68b8;
+    --cor-Texto: #ffffff;
+}
+
+/*Reset */
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor-DeFundo);
+}
+
+h1.titulo {
+    font-family: var(--fonte-Padrao);
+    color: var(--cor-Texto);
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
+
+p.texto {
+    font-family: var(--fonte-Padrao);
+    color: var(--cor-Texto);
+    margin: auto;
+    text-align: center;
+    padding: 8px;
+}
+
