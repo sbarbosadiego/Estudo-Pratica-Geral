@@ -10,7 +10,13 @@ import javax.persistence.Persistence;
 public class Conexao<E> {
     
     EntityManagerFactory factory = Persistence.createEntityManagerFactory("conexao-Mysql");
-    EntityManager entityManager = factory.createEntityManager();
+    EntityManager entityManager;
+    private Class<E> classe;
+    
+    public Conexao(Class<E> classe) {
+        this.classe = classe;
+        entityManager = factory.createEntityManager();
+    }
     
     public Conexao<E> conectar() {
         try {
@@ -28,6 +34,11 @@ public class Conexao<E> {
     
     public void fecharConexao() {
         entityManager.close();
+    }
+    
+    public Conexao<E> cadastrar(E entidade) {
+        entityManager.persist(entidade);
+        return this;
     }
     
 }

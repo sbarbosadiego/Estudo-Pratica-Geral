@@ -1,5 +1,6 @@
 package com.localhost.cadastrodealunosv2.model;
 
+import com.localhost.cadastrodealunosv2.exception.AlunoException;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,24 +16,29 @@ import org.hibernate.annotations.CreationTimestamp;
 @Data
 @Entity(name = "alunos")
 public class ModelAluno {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pk_codigo_aluno")
     private Long codigoAluno;
-    
+
     @Column(name = "aluno_nome", length = 50, nullable = false)
     private String nomeAluno;
-    
+
     @CreationTimestamp
     @Column(name = "data_cadastro")
     private LocalDateTime dataCriacao;
-    
+
     public ModelAluno() {
-        
+
     }
 
-    public ModelAluno(String nome) {
+    
+
+    public void setNomeAluno(String nome) {
+        if (nome != null && nome.length() > 50) {
+            throw new AlunoException("O nome do aluno não pode ter mais de 50 caracteres.");
+        }
         this.nomeAluno = nome;
     }
 
