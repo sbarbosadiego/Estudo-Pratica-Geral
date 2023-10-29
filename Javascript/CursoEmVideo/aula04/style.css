@@ -15,6 +15,7 @@
 
 body {
     background-color: var(--cor-DeFundo);
+    color: #ffffff;
 }
 
 h1.titulo {
