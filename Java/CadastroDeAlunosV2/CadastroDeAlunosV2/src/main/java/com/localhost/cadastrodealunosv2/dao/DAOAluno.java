@@ -11,7 +11,4 @@ public class DAOAluno extends Conexao {
         super(classe);
     }
     
-    
-    
-    
 }

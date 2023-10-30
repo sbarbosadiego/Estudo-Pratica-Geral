@@ -22,7 +22,7 @@ public class ModelAluno {
     @Column(name = "pk_codigo_aluno")
     private Long codigoAluno;
 
-    @Column(name = "aluno_nome", length = 50, nullable = false)
+    @Column(name = "aluno_nome", length = 51, nullable = false)
     private String nomeAluno;
 
     @CreationTimestamp
@@ -33,11 +33,11 @@ public class ModelAluno {
 
     }
 
-    
-
     public void setNomeAluno(String nome) {
-        if (nome != null && nome.length() > 50) {
+        if (nome.length() >= 50) {
             throw new AlunoException("O nome do aluno não pode ter mais de 50 caracteres.");
+        } else if (nome.isEmpty()) {
+            throw new AlunoException("O nome do aluno não pode estar vazio.");
         }
         this.nomeAluno = nome;
     }
