@@ -1,5 +1,6 @@
 package com.localhost.cadastrodealunosv2.model;
 
+import com.localhost.cadastrodealunosv2.exception.CursoException;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,6 +34,15 @@ public class ModelCurso {
 
     public ModelCurso() {
         
+    }
+    
+    public void setCursoAluno(String descricao) {
+        if (descricao.length() >= 50) {
+            throw new CursoException("A descrição não pode ter mais de 50 caracteres.");
+        } else if (descricao.isEmpty()) {
+            throw new CursoException("A descrição não pode estar vazio.");
+        }
+        this.descricaoCurso = descricao;
     }
     
 }
