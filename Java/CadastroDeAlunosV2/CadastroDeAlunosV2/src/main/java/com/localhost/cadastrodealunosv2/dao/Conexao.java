@@ -1,4 +1,4 @@
-package com.localhost.cadastrodealunosv2.conexao;
+package com.localhost.cadastrodealunosv2.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

@@ -1,5 +1,5 @@
 
-import com.localhost.cadastrodealunosv2.conexao.Conexao;
+import com.localhost.cadastrodealunosv2.dao.Conexao;
 import com.localhost.cadastrodealunosv2.model.ModelAluno;
 
 public class Teste {
