@@ -7,7 +7,7 @@ public class Teste {
     public static void main(String[] args) {
         
         ModelAluno modelAluno = new ModelAluno();
-        modelAluno.setNomeAluno("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        modelAluno.setNomeAluno("Thomas Shelby");
         
         Conexao<ModelAluno> dao = new Conexao<>(ModelAluno.class);
         dao.conectar().cadastrar(modelAluno).desconectar().fecharConexao();
