@@ -15,7 +15,7 @@ import lombok.Data;
  */
 @Data
 @Entity(name = "cursos_alunos")
-public class ModelCursoAluno {
+public class CursoAlunoModel {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,11 +24,11 @@ public class ModelCursoAluno {
     
     @ManyToOne
     @JoinColumn(name = "fk_aluno", referencedColumnName = "pk_codigo_aluno")
-    private ModelAluno codigoAluno;
+    private AlunoModel codigoAluno;
 
     @ManyToOne
     @JoinColumn(name = "fk_curso", referencedColumnName = "pk_codigo_curso")
-    private ModelCurso codigoCurso;
+    private CursoModel codigoCurso;
     
     @Transient
     private String aluno;
@@ -36,7 +36,7 @@ public class ModelCursoAluno {
     @Transient
     private String curso;
 
-    public ModelCursoAluno() {
+    public CursoAlunoModel() {
         
     }
 

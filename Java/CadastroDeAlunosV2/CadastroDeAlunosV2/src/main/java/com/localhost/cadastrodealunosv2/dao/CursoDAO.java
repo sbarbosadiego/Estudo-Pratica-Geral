@@ -3,9 +3,9 @@ package com.localhost.cadastrodealunosv2.dao;
 /**
  * @author Diego Barbosa da Silva
  */
-public class DAOCurso extends Conexao {
+public class CursoDAO extends Conexao {
     
-    public DAOCurso(Class classe) {
+    public CursoDAO(Class classe) {
         super(classe);
     }
     

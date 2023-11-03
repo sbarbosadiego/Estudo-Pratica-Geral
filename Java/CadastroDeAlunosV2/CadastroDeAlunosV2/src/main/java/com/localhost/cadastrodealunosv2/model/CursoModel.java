@@ -15,7 +15,7 @@ import org.hibernate.annotations.CreationTimestamp;
  */
 @Data
 @Entity(name = "cursos")
-public class ModelCurso {
+public class CursoModel {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ public class ModelCurso {
     @Column(name = "data_cadastro")
     private LocalDateTime dataCriacao;
 
-    public ModelCurso() {
+    public CursoModel() {
         
     }
     
