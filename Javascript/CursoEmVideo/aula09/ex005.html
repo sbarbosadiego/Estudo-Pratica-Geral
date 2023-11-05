@@ -10,11 +10,14 @@
     <h1>Iniciando Estudos DOM</h1>
     <p>Resultado</p>
     <p>Aprendendo a usar <strong>DOM</strong> em javascript</p>
-    <div>Clique aqui</div>
+    <div id="mensagem">Clique aqui</div>
     <script>
         var parafrafoUm = window.document.getElementsByTagName('p')[0]
         window.document.write(parafrafoUm.innerText);
-
+        parafrafoUm.style.color = 'black';
+        var d = window.document.getElementById('mensagem');
+        d.style.background = 'black';
+        d.innerText = 'eh mole';
     </script>
 </body>
 </html>
