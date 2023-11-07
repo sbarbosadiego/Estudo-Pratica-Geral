@@ -7,11 +7,11 @@ public class Teste {
     public static void main(String[] args) {
         
         AlunoModel modelAluno = new AlunoModel();
-        modelAluno.setNomeAluno("Thomas Shelby");
+        //modelAluno.setNomeAluno("Thomas Shelby");
         
         Conexao<AlunoModel> dao = new Conexao<>(AlunoModel.class);
-        dao.conectar().cadastrar(modelAluno).desconectar().fecharConexao();
-        
+        //dao.conectar().cadastrar(modelAluno).desconectar().fecharConexao();
+        dao.conectar().deletar(5);
     }
     
 }
