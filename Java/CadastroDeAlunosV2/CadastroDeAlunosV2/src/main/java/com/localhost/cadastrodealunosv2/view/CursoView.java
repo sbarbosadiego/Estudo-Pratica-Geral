@@ -8,12 +8,12 @@ package com.localhost.cadastrodealunosv2.view;
  *
  * @author di_an
  */
-public class AlunoView extends javax.swing.JFrame {
+public class CursoView extends javax.swing.JFrame {
 
     /**
-     * Creates new form AlunoView
+     * Creates new form CursoView
      */
-    public AlunoView() {
+    public CursoView() {
         initComponents();
     }
 
@@ -27,45 +27,52 @@ public class AlunoView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnSalvarAluno = new javax.swing.JButton();
+        btnSalvarCurso = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jtfAlunoId = new javax.swing.JTextField();
-        jtfNomeAluno = new javax.swing.JTextField();
+        jtfCursoId = new javax.swing.JTextField();
+        jtfNomeCurso = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtfCursoEmenta = new javax.swing.JTextPane();
         btnCancelarAluno = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Aluno");
         setResizable(false);
 
-        btnSalvarAluno.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnSalvarAluno.setText("Salvar");
-        btnSalvarAluno.addActionListener(new java.awt.event.ActionListener() {
+        btnSalvarCurso.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnSalvarCurso.setText("Salvar");
+        btnSalvarCurso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalvarAlunoActionPerformed(evt);
+                btnSalvarCursoActionPerformed(evt);
             }
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel1.setText("ID:");
 
-        jtfAlunoId.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jtfAlunoId.setEnabled(false);
-        jtfAlunoId.addActionListener(new java.awt.event.ActionListener() {
+        jtfCursoId.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jtfCursoId.setEnabled(false);
+        jtfCursoId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfAlunoIdActionPerformed(evt);
+                jtfCursoIdActionPerformed(evt);
             }
         });
 
-        jtfNomeAluno.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jtfNomeAluno.addActionListener(new java.awt.event.ActionListener() {
+        jtfNomeCurso.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jtfNomeCurso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfNomeAlunoActionPerformed(evt);
+                jtfNomeCursoActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Nome:");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel3.setText("Ementa:");
+
+        jScrollPane1.setViewportView(jtfCursoEmenta);
 
         btnCancelarAluno.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnCancelarAluno.setText("Cancelar");
@@ -80,21 +87,32 @@ public class AlunoView extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jtfAlunoId, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jtfNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jtfCursoId, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jtfNomeCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel3)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSalvarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnSalvarCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCancelarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(98, 98, 98))
+                .addGap(103, 103, 103))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,11 +123,15 @@ public class AlunoView extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtfNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfAlunoId, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfNomeCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfCursoId, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSalvarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSalvarCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCancelarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
@@ -129,17 +151,17 @@ public class AlunoView extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSalvarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarAlunoActionPerformed
+    private void btnSalvarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarCursoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSalvarAlunoActionPerformed
+    }//GEN-LAST:event_btnSalvarCursoActionPerformed
 
-    private void jtfAlunoIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfAlunoIdActionPerformed
+    private void jtfCursoIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCursoIdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfAlunoIdActionPerformed
+    }//GEN-LAST:event_jtfCursoIdActionPerformed
 
-    private void jtfNomeAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeAlunoActionPerformed
+    private void jtfNomeCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeCursoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfNomeAlunoActionPerformed
+    }//GEN-LAST:event_jtfNomeCursoActionPerformed
 
     private void btnCancelarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarAlunoActionPerformed
         // TODO add your handling code here:
@@ -162,31 +184,34 @@ public class AlunoView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AlunoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CursoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AlunoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CursoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AlunoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CursoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AlunoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CursoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AlunoView().setVisible(true);
+                new CursoView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelarAluno;
-    private javax.swing.JButton btnSalvarAluno;
+    private javax.swing.JButton btnSalvarCurso;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jtfAlunoId;
-    private javax.swing.JTextField jtfNomeAluno;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jtfCursoEmenta;
+    private javax.swing.JTextField jtfCursoId;
+    private javax.swing.JTextField jtfNomeCurso;
     // End of variables declaration//GEN-END:variables
 }
