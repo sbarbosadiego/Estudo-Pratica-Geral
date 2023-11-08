@@ -7,55 +7,29 @@ import javax.persistence.Persistence;
 /**
  * @author Diego Barbosa da Silva
  */
-public class Conexao<E> {
+public class Conexao {
 
-    EntityManagerFactory factory = Persistence.createEntityManagerFactory("conexao-Mysql");
-    EntityManager entityManager;
-    private Class<E> classe;
-
-    public Conexao(Class<E> classe) {
-        this.classe = classe;
-        entityManager = factory.createEntityManager();
-    }
-
-    public Conexao<E> conectar() {
+    private static EntityManagerFactory factory;
+    protected static EntityManager entityManager;
+    
+    static {
         try {
-            entityManager.getTransaction().begin();
+            factory = Persistence.createEntityManagerFactory("conexao-Mysql");
+            entityManager = factory.createEntityManager();
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    
+    public Conexao conectar() {
+        entityManager.getTransaction().begin();
         return this;
     }
-
-    public Conexao<E> desconectar() {
+    
+    public Conexao desconectar() {
         entityManager.getTransaction().commit();
         return this;
     }
-
-    public void fecharConexao() {
-        entityManager.close();
-    }
-
-    public Conexao<E> cadastrar(E entidade) {
-        entityManager.persist(entidade);
-        return this;
-    }
-
-    public void deletar(long id) {
-        try {
-            E entidade = entityManager.find(classe, id);
-            if (entidade != null) {
-                entityManager.remove(entidade);
-                entityManager.getTransaction().commit();
-            }
-        } catch (Exception e) {
-            entityManager.getTransaction().rollback();
-            e.printStackTrace();
-        }
-
-        
-        
-        
-        
-    }
+    
+    
 }

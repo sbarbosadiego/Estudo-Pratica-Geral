@@ -5,8 +5,5 @@ package com.localhost.cadastrodealunosv2.dao;
  */
 public class CursoDAO extends Conexao {
     
-    public CursoDAO(Class classe) {
-        super(classe);
-    }
     
 }
