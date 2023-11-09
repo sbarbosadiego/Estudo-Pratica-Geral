@@ -1,9 +1,17 @@
 package com.localhost.cadastrodealunosv2.view;
 
+import com.localhost.cadastrodealunosv2.controller.AlunoController;
+import com.localhost.cadastrodealunosv2.model.AlunoModel;
+import javax.swing.JOptionPane;
+
 /**
  * @author Diego Barbosa da Silva
  */
 public class AlunoView extends javax.swing.JFrame {
+    
+    // Aluno
+    AlunoModel alunoModel = new AlunoModel();
+    AlunoController alunoController = new AlunoController();
 
     /**
      * Creates new form AlunoView
@@ -23,11 +31,11 @@ public class AlunoView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btnSalvarAluno = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jtfAlunoId = new javax.swing.JTextField();
         jtfNomeAluno = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         btnCancelarAluno = new javax.swing.JButton();
+        jtfIdAluno = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Aluno");
@@ -38,17 +46,6 @@ public class AlunoView extends javax.swing.JFrame {
         btnSalvarAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalvarAlunoActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel1.setText("ID:");
-
-        jtfAlunoId.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jtfAlunoId.setEnabled(false);
-        jtfAlunoId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfAlunoIdActionPerformed(evt);
             }
         });
 
@@ -70,38 +67,51 @@ public class AlunoView extends javax.swing.JFrame {
             }
         });
 
+        jtfIdAluno.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jtfIdAluno.setEnabled(false);
+        jtfIdAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfIdAlunoActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel3.setText("ID:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jtfAlunoId, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jtfNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(114, Short.MAX_VALUE)
                 .addComponent(btnSalvarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCancelarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(98, 98, 98))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtfIdAluno)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jtfNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtfNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfAlunoId, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfIdAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalvarAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -125,12 +135,24 @@ public class AlunoView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarAlunoActionPerformed
-        // TODO add your handling code here:
+        if (jtfNomeAluno.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Campo vazio!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else if (jtfNomeAluno.getText().length() >= 50) {
+            JOptionPane.showMessageDialog(null, "Campo nome excede o limite de 50 caracteres!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else {
+            alunoModel.setNomeAluno(jtfNomeAluno.getText().toUpperCase());
+            if (alunoController.salvarAlunoController(alunoModel) > 0) {
+                JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+                jtfNomeAluno.setText("");
+            } else {
+                JOptionPane.showMessageDialog(null, "Aluno não cadastrado", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
     }//GEN-LAST:event_btnSalvarAlunoActionPerformed
-
-    private void jtfAlunoIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfAlunoIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfAlunoIdActionPerformed
 
     private void jtfNomeAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeAlunoActionPerformed
         // TODO add your handling code here:
@@ -139,6 +161,10 @@ public class AlunoView extends javax.swing.JFrame {
     private void btnCancelarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarAlunoActionPerformed
         dispose();
     }//GEN-LAST:event_btnCancelarAlunoActionPerformed
+
+    private void jtfIdAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfIdAlunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfIdAlunoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,10 +204,10 @@ public class AlunoView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelarAluno;
     private javax.swing.JButton btnSalvarAluno;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jtfAlunoId;
+    private javax.swing.JTextField jtfIdAluno;
     private javax.swing.JTextField jtfNomeAluno;
     // End of variables declaration//GEN-END:variables
 }

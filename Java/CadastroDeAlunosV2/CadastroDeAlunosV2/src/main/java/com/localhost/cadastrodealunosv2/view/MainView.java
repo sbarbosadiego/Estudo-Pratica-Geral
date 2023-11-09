@@ -1,18 +1,27 @@
 package com.localhost.cadastrodealunosv2.view;
 
+import com.localhost.cadastrodealunosv2.controller.AlunoController;
+import com.localhost.cadastrodealunosv2.model.AlunoModel;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 
 /**
  * @author Diego Barbosa da Silva
  */
 public class MainView extends javax.swing.JFrame {
+    
+    // Aluno
+    AlunoController alunoController = new AlunoController();
+    ArrayList<AlunoModel> listaAlunoModel = new ArrayList<>();
 
     /**
      * Creates new form MainView
      */
     public MainView() {
         initComponents();
+        listarAlunos();
     }
 
     /**
@@ -61,12 +70,13 @@ public class MainView extends javax.swing.JFrame {
 
         jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
+        jtbAluno.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jtbAluno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Cod.", "Nome", "Data Inc"
+                "Cod.", "Nome", "Data Cadastro"
             }
         ));
         jScrollPane2.setViewportView(jtbAluno);
@@ -172,7 +182,7 @@ public class MainView extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Cod.", "Curso", "Data Cad."
+                "Cod.", "Curso", "Data Cadastro"
             }
         ));
         jScrollPane4.setViewportView(jtbCurso);
@@ -403,7 +413,7 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfPesquisarAlunoActionPerformed
 
     private void btnAtualizarTabelaAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarTabelaAlunoActionPerformed
-        // TODO add your handling code here:
+        listarAlunos();
     }//GEN-LAST:event_btnAtualizarTabelaAlunoActionPerformed
 
     private void btnPesquisarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarAlunoActionPerformed
@@ -529,6 +539,21 @@ public class MainView extends javax.swing.JFrame {
                 new MainView().setVisible(true);
             }
         });
+    }
+    
+    private void listarAlunos() {
+        listaAlunoModel = (ArrayList<AlunoModel>) alunoController.retornarListarAlunosController();
+        DefaultTableModel tabela = (DefaultTableModel) jtbAluno.getModel();
+        tabela.setNumRows(0);
+
+        int contador = listaAlunoModel.size();
+        for (int c = 0; c < contador; c++) {
+            tabela.addRow(new Object[]{
+                listaAlunoModel.get(c).getCodigoAluno(),
+                listaAlunoModel.get(c).getNomeAluno(),
+                listaAlunoModel.get(c).getDataCriacao()
+            });
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
