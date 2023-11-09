@@ -1,12 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.localhost.cadastrodealunosv2.view;
 
 /**
- *
- * @author di_an
+ * @author Diego Barbosa da Silva
  */
 public class AlunoView extends javax.swing.JFrame {
 
@@ -142,7 +137,7 @@ public class AlunoView extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfNomeAlunoActionPerformed
 
     private void btnCancelarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarAlunoActionPerformed
-        // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_btnCancelarAlunoActionPerformed
 
     /**

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.localhost.cadastrodealunosv2.view;
 
 import java.awt.event.WindowAdapter;
@@ -420,7 +416,7 @@ public class MainView extends javax.swing.JFrame {
         alunoView.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
-                setEnabled(true); // Ativa a janela principal quando a janela secundária for fechada
+                setEnabled(true);
             }
         });
 
@@ -454,7 +450,7 @@ public class MainView extends javax.swing.JFrame {
         cursoView.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
-                setEnabled(true); // Ativa a janela principal quando a janela secundária for fechada
+                setEnabled(true);
             }
         });
 
@@ -488,7 +484,7 @@ public class MainView extends javax.swing.JFrame {
         matriculaView.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
-                setEnabled(true); // Ativa a janela principal quando a janela secundária for fechada
+                setEnabled(true);
             }
         });
 
