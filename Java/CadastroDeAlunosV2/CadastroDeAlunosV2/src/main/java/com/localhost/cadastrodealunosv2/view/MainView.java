@@ -5,6 +5,7 @@ import com.localhost.cadastrodealunosv2.model.AlunoModel;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -13,9 +14,11 @@ import javax.swing.table.DefaultTableModel;
 public class MainView extends javax.swing.JFrame {
     
     // Aluno
+    AlunoModel alunoModel = new AlunoModel();
     AlunoController alunoController = new AlunoController();
     ArrayList<AlunoModel> listaAlunoModel = new ArrayList<>();
-
+    
+    
     /**
      * Creates new form MainView
      */
@@ -405,7 +408,15 @@ public class MainView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEditarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarAlunoActionPerformed
-        
+        int linha = jtbAluno.getSelectedRow();
+        new AlunoView().setVisible(true);
+        try {
+            Long codigoAluno = (Long) jtbAluno.getValueAt(linha, 0);
+            alunoModel = alunoController.retornarAlunoController(codigoAluno);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Nenhum registro selecionado");
+        }
     }//GEN-LAST:event_btnEditarAlunoActionPerformed
 
     private void jtfPesquisarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPesquisarAlunoActionPerformed
@@ -541,7 +552,7 @@ public class MainView extends javax.swing.JFrame {
         });
     }
     
-    private void listarAlunos() {
+    public void listarAlunos() {
         listaAlunoModel = (ArrayList<AlunoModel>) alunoController.retornarListarAlunosController();
         DefaultTableModel tabela = (DefaultTableModel) jtbAluno.getModel();
         tabela.setNumRows(0);
