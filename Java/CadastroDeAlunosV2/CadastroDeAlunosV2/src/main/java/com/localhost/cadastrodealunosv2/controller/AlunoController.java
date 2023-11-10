@@ -19,6 +19,10 @@ public class AlunoController {
         return this.alunoDao.atualizarAluno(aluno);
     }
     
+    public boolean excluirAlunoController(Long id) {
+        return this.alunoDao.excluirAluno(id);
+    }
+    
     public AlunoModel retornarAlunoController(Long id) {
         return this.alunoDao.retornarAluno(id);
     }

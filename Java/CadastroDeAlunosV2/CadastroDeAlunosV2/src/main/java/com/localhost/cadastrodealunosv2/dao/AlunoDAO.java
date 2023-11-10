@@ -8,6 +8,11 @@ import java.util.List;
  */
 public class AlunoDAO extends Conexao {
     
+    /**
+     * Faz o insert de um novo registro de aluno.
+     * @param aluno
+     * @return int
+     */
     public int cadastrarAluno(AlunoModel aluno) {
         try {
             super.conectar();
@@ -17,11 +22,14 @@ public class AlunoDAO extends Conexao {
         } catch (Exception e) {
             e.printStackTrace();
             return 0;
-        } finally {
-            super.fecharConexao();
         }
     }
     
+    /**
+     * Atualiza o registro de um aluno.
+     * @param aluno
+     * @return boolean
+     */
     public boolean atualizarAluno(AlunoDAO aluno) {
         try {
             super.conectar();
@@ -31,12 +39,15 @@ public class AlunoDAO extends Conexao {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
-        } finally {
-            super.fecharConexao();
         }
     }
     
-    public void excluirAluno(Long id) {
+    /**
+     * Deleta o registro de um aluno.
+     * @param id
+     * @return boolean
+     */
+    public boolean excluirAluno(Long id) {
         AlunoModel alunoModel = new AlunoModel();
         try {
             super.conectar();
@@ -45,13 +56,18 @@ public class AlunoDAO extends Conexao {
                 entityManager.remove(alunoModel);
             }
             super.desconectar();
+            return true;
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            super.fecharConexao();
+            return false;
         }
     }
     
+    /**
+     * Retorna o registro de um aluno.
+     * @param id
+     * @return AlunoModel
+     */
     public AlunoModel retornarAluno(Long id) {
         AlunoModel alunoModel = new AlunoModel();
         try {
@@ -64,6 +80,10 @@ public class AlunoDAO extends Conexao {
         return alunoModel;
     }
     
+    /**
+     * Retorna uma lista de registro de alunos.
+     * @return List<AlunoModel>
+     */
     public List<AlunoModel> retornarListaAluno() {
         List<AlunoModel> listaAlunos = entityManager
                 .createQuery("SELECT u FROM alunos u", AlunoModel.class)

@@ -446,7 +446,19 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNovoAlunoActionPerformed
 
     private void btnExcluirAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirAlunoActionPerformed
-        // TODO add your handling code here:
+        int linha = jtbAluno.getSelectedRow();
+        Long codigoAluno = (Long) jtbAluno.getValueAt(linha, 0);
+        if (JOptionPane.showConfirmDialog(this, "Excluir Aluno?", "Excluir",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            if (alunoController.excluirAlunoController(codigoAluno)) {
+                JOptionPane.showMessageDialog(this, "Aluno excluído", "ATENÇÃO",
+                        JOptionPane.WARNING_MESSAGE);
+                listarAlunos();
+            } else {
+                JOptionPane.showMessageDialog(this, "Erro de exclusão", "ERRO",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }//GEN-LAST:event_btnExcluirAlunoActionPerformed
 
     private void btnEditarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarCursoActionPerformed
