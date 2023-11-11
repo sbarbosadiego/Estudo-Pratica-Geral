@@ -81,7 +81,15 @@ public class MainView extends javax.swing.JFrame {
             new String [] {
                 "Cod.", "Nome", "Data Cadastro"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(jtbAluno);
 
         btnEditarAluno.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -187,7 +195,15 @@ public class MainView extends javax.swing.JFrame {
             new String [] {
                 "Cod.", "Curso", "Data Cadastro"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane4.setViewportView(jtbCurso);
 
         btnEditarCurso.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -293,7 +309,15 @@ public class MainView extends javax.swing.JFrame {
             new String [] {
                 "Matrícula", "Cód. Aluno", "Aluno", "Curso"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane5.setViewportView(jtbMatricula);
 
         btnEditarMatricula.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
