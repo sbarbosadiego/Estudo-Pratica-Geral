@@ -12,12 +12,20 @@ public class AlunoView extends javax.swing.JFrame {
     // Aluno
     AlunoModel alunoModel = new AlunoModel();
     AlunoController alunoController = new AlunoController();
-
+    
+    // Tela
+    private MainView mainView;
+    
     /**
      * Creates new form AlunoView
      */
-    public AlunoView() {
+    public AlunoView(MainView mainView) {
         initComponents();
+        this.mainView = mainView;
+    }
+
+    private AlunoView() {
+        
     }
 
     /**
@@ -135,22 +143,11 @@ public class AlunoView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarAlunoActionPerformed
-        if (jtfNomeAluno.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Campo vazio!", "ATENÇÃO",
-                    JOptionPane.WARNING_MESSAGE);
-        } else if (jtfNomeAluno.getText().length() >= 50) {
-            JOptionPane.showMessageDialog(null, "Campo nome excede o limite de 50 caracteres!", "ATENÇÃO",
-                    JOptionPane.WARNING_MESSAGE);
-        } else {
-            alunoModel.setNomeAluno(jtfNomeAluno.getText().toUpperCase());
-            if (alunoController.salvarAlunoController(alunoModel) > 0) {
-                JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso", "ATENÇÃO",
-                        JOptionPane.INFORMATION_MESSAGE);
-                jtfNomeAluno.setText("");
-            } else {
-                JOptionPane.showMessageDialog(null, "Aluno não cadastrado", "ATENÇÃO",
-                        JOptionPane.INFORMATION_MESSAGE);
-            }
+        if (mainView.editarSalvar.equals("salvar")) {
+            salvarAluno();
+            dispose();
+        } else if (mainView.editarSalvar.equals("editar")) {
+            editarAluno();
         }
     }//GEN-LAST:event_btnSalvarAlunoActionPerformed
 
@@ -200,6 +197,54 @@ public class AlunoView extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void salvarAluno() {
+        if (jtfNomeAluno.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Campo vazio!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else if (jtfNomeAluno.getText().length() >= 50) {
+            JOptionPane.showMessageDialog(null, "Campo nome excede o limite de 50 caracteres!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else {
+            alunoModel.setNomeAluno(jtfNomeAluno.getText().toUpperCase());
+            if (alunoController.salvarAlunoController(alunoModel) > 0) {
+                JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+                mainView.listarAlunos();
+            } else {
+                JOptionPane.showMessageDialog(null, "Aluno não cadastrado", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }
+    
+    private void editarAluno() {
+        if (jtfNomeAluno.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Campo vazio!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else if (jtfNomeAluno.getText().length() >= 50) {
+            JOptionPane.showMessageDialog(null, "Campo nome excede o limite de 50 caracteres!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else {
+            alunoModel.setNomeAluno(jtfNomeAluno.getText().toUpperCase());
+            if (alunoController.atualizarAlunoController(alunoModel)) {
+                JOptionPane.showMessageDialog(null, "Aluno atualizado com sucesso", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+                mainView.listarAlunos();
+                dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Aluno não atualizado", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }
+    
+    public void setAlunoModel(AlunoModel aluno) {
+        this.alunoModel = aluno;
+        jtfIdAluno.setText(this.alunoModel.getCodigoAluno().toString());
+        jtfNomeAluno.setText(this.alunoModel.getNomeAluno());
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelarAluno;

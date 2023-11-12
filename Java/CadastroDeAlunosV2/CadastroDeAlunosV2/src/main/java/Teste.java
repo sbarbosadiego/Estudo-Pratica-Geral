@@ -14,20 +14,20 @@ public class Teste {
         
         AlunoDAO dao = new AlunoDAO();
         //dao.cadastrarAluno(modelAluno);
-        modelAluno = dao.retornarAluno(4L);
+        //modelAluno = dao.retornarAluno(4L);
         System.out.println(modelAluno.toString());
         //dao.excluirAluno(4L);
         //modelAluno.setNomeAluno("Diego Silva");
         //dao.atualizarAluno(modelAluno);
         
-        /*
+        
         List<AlunoModel> lista = new ArrayList<>();
-        lista = dao.retornarListaAluno();
+        lista = dao.retornarListaAlunoNome("Di");
         
         for (AlunoModel aluno: lista) {
             System.out.println(aluno.toString());
         }
-        */
+        
     }
     
 }

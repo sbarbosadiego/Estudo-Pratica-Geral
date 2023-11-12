@@ -2,11 +2,10 @@ package com.localhost.cadastrodealunosv2.view;
 
 import com.localhost.cadastrodealunosv2.controller.AlunoController;
 import com.localhost.cadastrodealunosv2.model.AlunoModel;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import lombok.Data;
 
 /**
  * @author Diego Barbosa da Silva
@@ -18,6 +17,8 @@ public class MainView extends javax.swing.JFrame {
     AlunoController alunoController = new AlunoController();
     ArrayList<AlunoModel> listaAlunoModel = new ArrayList<>();
     
+    // Teste
+    String editarSalvar;
     
     /**
      * Creates new form MainView
@@ -26,7 +27,7 @@ public class MainView extends javax.swing.JFrame {
         initComponents();
         listarAlunos();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -432,15 +433,8 @@ public class MainView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEditarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarAlunoActionPerformed
-        int linha = jtbAluno.getSelectedRow();
-        new AlunoView().setVisible(true);
-        try {
-            Long codigoAluno = (Long) jtbAluno.getValueAt(linha, 0);
-            alunoModel = alunoController.retornarAlunoController(codigoAluno);
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Nenhum registro selecionado");
-        }
+        editarSalvar = "editar";
+        editarAluno();
     }//GEN-LAST:event_btnEditarAlunoActionPerformed
 
     private void jtfPesquisarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPesquisarAlunoActionPerformed
@@ -452,21 +446,12 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAtualizarTabelaAlunoActionPerformed
 
     private void btnPesquisarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarAlunoActionPerformed
-        // TODO add your handling code here:
+        listarAlunosPorNome(jtfPesquisarAluno.getText());
     }//GEN-LAST:event_btnPesquisarAlunoActionPerformed
 
     private void btnNovoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoAlunoActionPerformed
-        AlunoView alunoView = new AlunoView();
-
-        alunoView.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosed(WindowEvent e) {
-                setEnabled(true);
-            }
-        });
-
-        alunoView.setVisible(true);
-        setEnabled(false);
+        editarSalvar = "salvar";
+        new AlunoView(this).setVisible(true);
     }//GEN-LAST:event_btnNovoAlunoActionPerformed
 
     private void btnExcluirAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirAlunoActionPerformed
@@ -502,17 +487,7 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPesquisarCursoActionPerformed
 
     private void btnNovoCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoCursoActionPerformed
-        CursoView cursoView = new CursoView();
-
-        cursoView.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosed(WindowEvent e) {
-                setEnabled(true);
-            }
-        });
-
-        cursoView.setVisible(true);
-        setEnabled(false);
+        
     }//GEN-LAST:event_btnNovoCursoActionPerformed
 
     private void btnExcluirCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirCursoActionPerformed
@@ -536,17 +511,7 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPesquisarMatriculaActionPerformed
 
     private void btnNovoMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoMatriculaActionPerformed
-        MatriculaView matriculaView = new MatriculaView();
-
-        matriculaView.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosed(WindowEvent e) {
-                setEnabled(true);
-            }
-        });
-
-        matriculaView.setVisible(true);
-        setEnabled(false);
+        
     }//GEN-LAST:event_btnNovoMatriculaActionPerformed
 
     private void btnExcluirMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirMatriculaActionPerformed
@@ -588,8 +553,36 @@ public class MainView extends javax.swing.JFrame {
         });
     }
     
+    private void editarAluno() {
+        int linha = jtbAluno.getSelectedRow();
+        try {
+            Long codigoAluno = (Long) jtbAluno.getValueAt(linha, 0);
+            alunoModel = alunoController.retornarAlunoController(codigoAluno);
+            AlunoView alunoView = new AlunoView(this);
+            alunoView.setAlunoModel(alunoModel);
+            alunoView.setVisible(true);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Nenhum registro selecionado");
+        }
+    }
+    
     public void listarAlunos() {
         listaAlunoModel = (ArrayList<AlunoModel>) alunoController.retornarListarAlunosController();
+        DefaultTableModel tabela = (DefaultTableModel) jtbAluno.getModel();
+        tabela.setNumRows(0);
+
+        int contador = listaAlunoModel.size();
+        for (int c = 0; c < contador; c++) {
+            tabela.addRow(new Object[]{
+                listaAlunoModel.get(c).getCodigoAluno(),
+                listaAlunoModel.get(c).getNomeAluno(),
+                listaAlunoModel.get(c).getDataCriacao()
+            });
+        }
+    }
+    
+    public void listarAlunosPorNome(String nome) {
+        listaAlunoModel = (ArrayList<AlunoModel>) alunoController.retornarListarAlunoNomeController(nome);
         DefaultTableModel tabela = (DefaultTableModel) jtbAluno.getModel();
         tabela.setNumRows(0);
 

@@ -30,7 +30,7 @@ public class AlunoDAO extends Conexao {
      * @param aluno
      * @return boolean
      */
-    public boolean atualizarAluno(AlunoDAO aluno) {
+    public boolean atualizarAluno(AlunoModel aluno) {
         try {
             super.conectar();
             entityManager.merge(aluno);
@@ -91,5 +91,17 @@ public class AlunoDAO extends Conexao {
         return listaAlunos;
     }
     
+    /**
+     * Retorna a 
+     * @param nome
+     * @return 
+     */
+    public List<AlunoModel> retornarListaAlunoNome(String nome) {
+        List<AlunoModel> listaAlunos = entityManager
+                .createQuery("SELECT u FROM alunos u WHERE u.nomeAluno LIKE :nome", AlunoModel.class)
+                .setParameter("nome", "%" + nome + "%")
+                .getResultList();
+        return listaAlunos;
+    }
     
 }

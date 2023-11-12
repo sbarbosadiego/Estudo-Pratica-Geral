@@ -15,7 +15,7 @@ public class AlunoController {
         return this.alunoDao.cadastrarAluno(aluno);
     }
     
-    public boolean atualizarAlunoController(AlunoDAO aluno) {
+    public boolean atualizarAlunoController(AlunoModel aluno) {
         return this.alunoDao.atualizarAluno(aluno);
     }
     
@@ -29,6 +29,10 @@ public class AlunoController {
     
     public List<AlunoModel> retornarListarAlunosController() {
         return this.alunoDao.retornarListaAluno();
+    }
+    
+    public List<AlunoModel> retornarListarAlunoNomeController(String nome) {
+        return this.alunoDao.retornarListaAlunoNome(nome);
     }
     
 }
