@@ -1,7 +1,9 @@
 package com.localhost.cadastrodealunosv2.view;
 
 import com.localhost.cadastrodealunosv2.controller.AlunoController;
+import com.localhost.cadastrodealunosv2.controller.CursoController;
 import com.localhost.cadastrodealunosv2.model.AlunoModel;
+import com.localhost.cadastrodealunosv2.model.CursoModel;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -17,6 +19,11 @@ public class MainView extends javax.swing.JFrame {
     AlunoController alunoController = new AlunoController();
     ArrayList<AlunoModel> listaAlunoModel = new ArrayList<>();
     
+    // Curso
+    CursoModel cursoModel = new CursoModel();
+    CursoController cursoController = new CursoController();
+    ArrayList<CursoModel> listaCursoModel = new ArrayList<>();
+    
     // Teste
     String editarSalvar;
     
@@ -26,6 +33,7 @@ public class MainView extends javax.swing.JFrame {
     public MainView() {
         initComponents();
         listarAlunos();
+        listarCursos();
     }
     
     /**
@@ -189,6 +197,7 @@ public class MainView extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Aluno", telaAluno);
 
+        jtbCurso.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jtbCurso.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -450,28 +459,16 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPesquisarAlunoActionPerformed
 
     private void btnNovoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoAlunoActionPerformed
-        editarSalvar = "salvar";
-        new AlunoView(this).setVisible(true);
+        salvarNovoAluno();
     }//GEN-LAST:event_btnNovoAlunoActionPerformed
 
     private void btnExcluirAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirAlunoActionPerformed
-        int linha = jtbAluno.getSelectedRow();
-        Long codigoAluno = (Long) jtbAluno.getValueAt(linha, 0);
-        if (JOptionPane.showConfirmDialog(this, "Excluir Aluno?", "Excluir",
-                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-            if (alunoController.excluirAlunoController(codigoAluno)) {
-                JOptionPane.showMessageDialog(this, "Aluno excluído", "ATENÇÃO",
-                        JOptionPane.WARNING_MESSAGE);
-                listarAlunos();
-            } else {
-                JOptionPane.showMessageDialog(this, "Erro de exclusão", "ERRO",
-                        JOptionPane.ERROR_MESSAGE);
-            }
-        }
+        excluirAluno();
     }//GEN-LAST:event_btnExcluirAlunoActionPerformed
 
     private void btnEditarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarCursoActionPerformed
-        // TODO add your handling code here:
+        editarSalvar = "editar";
+        editarCurso();
     }//GEN-LAST:event_btnEditarCursoActionPerformed
 
     private void jtfPesquisarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPesquisarCursoActionPerformed
@@ -479,19 +476,19 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfPesquisarCursoActionPerformed
 
     private void btnAtualizarTabelaCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarTabelaCursoActionPerformed
-        // TODO add your handling code here:
+        listarCursos();
     }//GEN-LAST:event_btnAtualizarTabelaCursoActionPerformed
 
     private void btnPesquisarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarCursoActionPerformed
-        // TODO add your handling code here:
+        listarCursosPorNome(jtfPesquisarCurso.getText());
     }//GEN-LAST:event_btnPesquisarCursoActionPerformed
 
     private void btnNovoCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoCursoActionPerformed
-        
+        salvarNovoCurso();
     }//GEN-LAST:event_btnNovoCursoActionPerformed
 
     private void btnExcluirCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirCursoActionPerformed
-        // TODO add your handling code here:
+        excluirCurso();
     }//GEN-LAST:event_btnExcluirCursoActionPerformed
 
     private void btnEditarMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarMatriculaActionPerformed
@@ -553,6 +550,25 @@ public class MainView extends javax.swing.JFrame {
         });
     }
     
+    /**
+     * Método para salvar um aluno.
+     */
+    private void salvarNovoAluno() {
+        editarSalvar = "salvar";
+        new AlunoView(this).setVisible(true);
+    }
+    
+    /**
+     * Método para salvar um curso.
+     */
+    private void salvarNovoCurso() {
+        editarSalvar = "salvar";
+        new CursoView(this).setVisible(true);
+    }
+    
+    /**
+     * Método para editar um registro de aluno na tabela.
+     */
     private void editarAluno() {
         int linha = jtbAluno.getSelectedRow();
         try {
@@ -566,6 +582,57 @@ public class MainView extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * Método para editar um registro de curso na tabela.
+     */
+    private void editarCurso() {
+        int linha = jtbCurso.getSelectedRow();
+        try {
+            Long codigoCurso = (Long) jtbCurso.getValueAt(linha, 0);
+            cursoModel = cursoController.retornarCursoController(codigoCurso);
+            CursoView cursoView = new CursoView(this);
+            cursoView.setCursoModel(cursoModel);
+            cursoView.setVisible(true);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Nenhum registro selecionado");
+        }
+    }
+    
+    private void excluirAluno() {
+        int linha = jtbAluno.getSelectedRow();
+        Long codigoAluno = (Long) jtbAluno.getValueAt(linha, 0);
+        if (JOptionPane.showConfirmDialog(this, "Excluir Aluno?", "Excluir",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            if (alunoController.excluirAlunoController(codigoAluno)) {
+                JOptionPane.showMessageDialog(this, "Aluno excluído", "ATENÇÃO",
+                        JOptionPane.WARNING_MESSAGE);
+                listarAlunos();
+            } else {
+                JOptionPane.showMessageDialog(this, "Erro de exclusão", "ERRO",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+    
+    private void excluirCurso() {
+        int linha = jtbCurso.getSelectedRow();
+        Long codigoCurso = (Long) jtbCurso.getValueAt(linha, 0);
+        if (JOptionPane.showConfirmDialog(this, "Excluir Curso?", "Excluir",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            if (cursoController.excluirCursoController(codigoCurso)) {
+                JOptionPane.showMessageDialog(this, "Curso excluído", "ATENÇÃO",
+                        JOptionPane.WARNING_MESSAGE);
+                listarCursos();
+            } else {
+                JOptionPane.showMessageDialog(this, "Erro de exclusão", "ERRO",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+    
+    /**
+     * Método para carregar os aluno na tabela.
+     */
     public void listarAlunos() {
         listaAlunoModel = (ArrayList<AlunoModel>) alunoController.retornarListarAlunosController();
         DefaultTableModel tabela = (DefaultTableModel) jtbAluno.getModel();
@@ -581,6 +648,24 @@ public class MainView extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * Método apra carregar os cursos na tabela.
+     */
+    public void listarCursos() {
+        listaCursoModel = (ArrayList<CursoModel>) cursoController.retornarListarCursosController();
+        DefaultTableModel tabela = (DefaultTableModel) jtbCurso.getModel();
+        tabela.setNumRows(0);
+
+        int contador = listaCursoModel.size();
+        for (int c = 0; c < contador; c++) {
+            tabela.addRow(new Object[]{
+                listaCursoModel.get(c).getCodigoCurso(),
+                listaCursoModel.get(c).getDescricaoCurso(),
+                listaCursoModel.get(c).getDataCriacao()
+            });
+        }
+    }
+    
     public void listarAlunosPorNome(String nome) {
         listaAlunoModel = (ArrayList<AlunoModel>) alunoController.retornarListarAlunoNomeController(nome);
         DefaultTableModel tabela = (DefaultTableModel) jtbAluno.getModel();
@@ -592,6 +677,21 @@ public class MainView extends javax.swing.JFrame {
                 listaAlunoModel.get(c).getCodigoAluno(),
                 listaAlunoModel.get(c).getNomeAluno(),
                 listaAlunoModel.get(c).getDataCriacao()
+            });
+        }
+    }
+    
+    public void listarCursosPorNome(String nome) {
+        listaCursoModel = (ArrayList<CursoModel>) cursoController.retornarListarCursoNomeController(nome);
+        DefaultTableModel tabela = (DefaultTableModel) jtbCurso.getModel();
+        tabela.setNumRows(0);
+
+        int contador = listaCursoModel.size();
+        for (int c = 0; c < contador; c++) {
+            tabela.addRow(new Object[]{
+                listaCursoModel.get(c).getCodigoCurso(),
+                listaCursoModel.get(c).getDescricaoCurso(),
+                listaCursoModel.get(c).getDataCriacao()
             });
         }
     }

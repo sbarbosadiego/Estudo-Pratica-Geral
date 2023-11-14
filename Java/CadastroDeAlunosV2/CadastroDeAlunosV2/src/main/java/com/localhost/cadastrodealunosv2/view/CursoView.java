@@ -1,16 +1,33 @@
 package com.localhost.cadastrodealunosv2.view;
 
+import com.localhost.cadastrodealunosv2.controller.CursoController;
+import com.localhost.cadastrodealunosv2.model.CursoModel;
+import javax.swing.JOptionPane;
+
 /**
  * @author Diego Barbosa da Silva
  */
 public class CursoView extends javax.swing.JFrame {
+    
+    // Aluno
+    CursoModel cursoModel = new CursoModel();
+    CursoController cursoController = new CursoController();
+    
+    // Tela
+    private MainView mainView;
 
     /**
      * Creates new form CursoView
      */
-    public CursoView() {
+    public CursoView(MainView mainView) {
         initComponents();
+        this.mainView = mainView;
     }
+    
+    public CursoView() {
+        
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -24,7 +41,7 @@ public class CursoView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnSalvarCurso = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jtfCursoId = new javax.swing.JTextField();
+        jtfIdCurso = new javax.swing.JTextField();
         jtfNomeCurso = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -46,11 +63,11 @@ public class CursoView extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel1.setText("ID:");
 
-        jtfCursoId.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jtfCursoId.setEnabled(false);
-        jtfCursoId.addActionListener(new java.awt.event.ActionListener() {
+        jtfIdCurso.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jtfIdCurso.setEnabled(false);
+        jtfIdCurso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfCursoIdActionPerformed(evt);
+                jtfIdCursoActionPerformed(evt);
             }
         });
 
@@ -67,6 +84,7 @@ public class CursoView extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Ementa:");
 
+        jtfCursoEmenta.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jScrollPane1.setViewportView(jtfCursoEmenta);
 
         btnCancelarAluno.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -82,25 +100,21 @@ public class CursoView extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1)
-                                    .addComponent(jtfCursoId, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jtfIdCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
                                     .addComponent(jtfNomeCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel3)))
+                            .addComponent(jLabel3))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1)))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -119,7 +133,7 @@ public class CursoView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jtfNomeCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfCursoId, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfIdCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -147,12 +161,17 @@ public class CursoView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarCursoActionPerformed
-        // TODO add your handling code here:
+        if (mainView.editarSalvar.equals("salvar")) {
+            salvarCurso();
+            dispose();
+        } else if (mainView.editarSalvar.equals("editar")) {
+            editarCurso();
+        }
     }//GEN-LAST:event_btnSalvarCursoActionPerformed
 
-    private void jtfCursoIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCursoIdActionPerformed
+    private void jtfIdCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfIdCursoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfCursoIdActionPerformed
+    }//GEN-LAST:event_jtfIdCursoActionPerformed
 
     private void jtfNomeCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeCursoActionPerformed
         // TODO add your handling code here:
@@ -196,6 +215,56 @@ public class CursoView extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void salvarCurso() {
+        if (jtfNomeCurso.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Campo vazio!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else if (jtfNomeCurso.getText().length() >= 50) {
+            JOptionPane.showMessageDialog(null, "Campo nome excede o limite de 50 caracteres!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else {
+            cursoModel.setDescricaoCurso(jtfNomeCurso.getText().toUpperCase());
+            cursoModel.setEmentaCurso(jtfCursoEmenta.getText());
+            if (cursoController.salvarCursoController(cursoModel) > 0) {
+                JOptionPane.showMessageDialog(null, "Curso cadastrado com sucesso", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+                mainView.listarCursos();
+            } else {
+                JOptionPane.showMessageDialog(null, "Curso não cadastrado", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }
+    
+    private void editarCurso() {
+        if (jtfNomeCurso.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Campo vazio!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else if (jtfNomeCurso.getText().length() >= 50) {
+            JOptionPane.showMessageDialog(null, "Campo nome excede o limite de 50 caracteres!", "ATENÇÃO",
+                    JOptionPane.WARNING_MESSAGE);
+        } else {
+            cursoModel.setDescricaoCurso(jtfNomeCurso.getText().toUpperCase());
+            cursoModel.setEmentaCurso(jtfCursoEmenta.getText());
+            if (cursoController.atualizarCursoController(cursoModel)) {
+                JOptionPane.showMessageDialog(null, "Curso atualizado com sucesso", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+                mainView.listarCursos();
+                dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Curso não atualizado", "ATENÇÃO",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }
+    
+    public void setCursoModel(CursoModel curso) {
+        this.cursoModel = curso;
+        jtfIdCurso.setText(this.cursoModel.getCodigoCurso().toString());
+        jtfNomeCurso.setText(this.cursoModel.getDescricaoCurso());
+        jtfCursoEmenta.setText(this.cursoModel.getEmentaCurso());
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelarAluno;
@@ -206,7 +275,7 @@ public class CursoView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane jtfCursoEmenta;
-    private javax.swing.JTextField jtfCursoId;
+    private javax.swing.JTextField jtfIdCurso;
     private javax.swing.JTextField jtfNomeCurso;
     // End of variables declaration//GEN-END:variables
 }

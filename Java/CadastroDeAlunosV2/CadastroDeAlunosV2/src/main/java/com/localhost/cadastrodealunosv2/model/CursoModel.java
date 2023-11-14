@@ -36,7 +36,7 @@ public class CursoModel {
         
     }
     
-    public void setCursoAluno(String descricao) {
+    public void setDescricaoCurso(String descricao) {
         if (descricao.length() >= 50) {
             throw new CursoException("A descrição não pode ter mais de 50 caracteres.");
         } else if (descricao.isEmpty()) {
