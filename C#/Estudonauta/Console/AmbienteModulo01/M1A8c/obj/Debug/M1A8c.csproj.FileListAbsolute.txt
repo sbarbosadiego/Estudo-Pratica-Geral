@@ -1,0 +1,7 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8c\bin\Debug\M1A8c.exe.config
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8c\bin\Debug\M1A8c.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8c\bin\Debug\M1A8c.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8c\obj\Debug\M1A8c.csproj.AssemblyReference.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8c\obj\Debug\M1A8c.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8c\obj\Debug\M1A8c.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8c\obj\Debug\M1A8c.pdb

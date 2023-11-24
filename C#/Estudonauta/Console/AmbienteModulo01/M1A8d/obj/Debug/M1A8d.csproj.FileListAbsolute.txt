@@ -1,0 +1,10 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\bin\Debug\M1A8d.exe.config
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\bin\Debug\M1A8d.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\bin\Debug\M1A8d.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\obj\Debug\M1A8d.csproj.AssemblyReference.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\obj\Debug\M1A8d.Form1.resources
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\obj\Debug\M1A8d.Properties.Resources.resources
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\obj\Debug\M1A8d.csproj.GenerateResource.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\obj\Debug\M1A8d.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\obj\Debug\M1A8d.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A8d\obj\Debug\M1A8d.pdb
