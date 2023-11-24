@@ -14,3 +14,53 @@
 /Java/Unicesumar/Programacao-2/testeEscuro/target/
 /Java/Unicesumar/Programacao-2/JavaApplication68/nbproject/private/
 /Java/Unicesumar/Programacao-2/JavaApplication68/build/
+
+# Arquivos de compilação e pacotes NuGet
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.exe.config
+*.rar
+*.zip
+*.tar.gz
+*.7z
+
+# Arquivos gerados pelo Visual Studio
+.vscode/
+.vs2019/
+.vs/
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_i.h
+*_p.h
+*.log
+*.user
+*.userosscache
+*.suo
+*. suo
+*.ntvs_analysis.dat
+*.sln.docstates
+
+# Diretórios gerados pelo Rider
+.idea/
+.idea/
+*.suo
+*.suo
+*.resharper/
+*.resharper/
+*.sln.docstates
