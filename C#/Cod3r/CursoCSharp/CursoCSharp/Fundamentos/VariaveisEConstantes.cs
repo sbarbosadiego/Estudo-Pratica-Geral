@@ -36,7 +36,6 @@ namespace CursoCSharp.Fundamentos
             Console.WriteLine(valorGigante);
 
             float valorReal = 1299.99F;
-
         }
     }
 }
