@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --fonte-Texto: 'Quicksand', sans-serif;
+    --fonte-Destaque: 'Bebas Neue', sans-serif;
+}
+
+/* Esconder barra de rolagem */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/*Reset */
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Configuração Menu */
+nav {
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+}
+
+nav > a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    font-family: var(--fonte-Destaque);
+    font-size: 30px;
+}
+
+nav > a:hover {
+    color: rgb(124, 124, 126);
+}
+
+/* Configuração Body */
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    background-image: url(/imagens/wallpaper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Configuração Main */
+main {
+    background-color: white;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+main h1, h2, h3 {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: var(--fonte-Destaque);
+}
+
+main p {
+    font-family: var(--fonte-Texto);
+    max-width: 800px;
+    margin: auto;
+    font-weight: 500;
+    text-align: justify;
+    padding: 10px;
+}
+
+main ul {
+    margin-left: 30px;
+    padding-left: 40px;
+}
+main fieldset {
+    max-width: 800px;
+    margin: auto;
+}
+/* Configuração formulário */
+
+main fieldset {
+    padding: 10px;
+}
+
+main legend {
+    padding: 7px;
+}
+
+/* Configuração Footer*/
+footer {
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    border-bottom: 40px;
+}
+
+footer > p {
+    padding: 10px;
+    font-family: var(--fonte-Texto);
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition-duration: 0.3s;
+    font-family: var(--fonte-Texto);
+}
+
+footer > p > a:hover {
+    color: rgb(124, 124, 126);
+}
+
+/* Class */
+
+iframe.janela {
+    width: 800px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+p.texto {
+    text-indent: 30px;
+}

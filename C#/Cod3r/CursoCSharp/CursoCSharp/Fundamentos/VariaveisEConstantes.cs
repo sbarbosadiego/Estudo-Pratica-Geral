@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoCSharp.Fundamentos
 {
-    internal class VariaveisEConstantes
+    class VariaveisEConstantes
     {
         public static void Executar()
         {
