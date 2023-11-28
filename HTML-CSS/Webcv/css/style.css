@@ -75,6 +75,21 @@ main h1, h2, h3 {
     font-family: var(--fonte-Destaque);
 }
 
+h2 > a {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition-duration: 0.3s;
+    text-decoration: none;
+    color: black;
+    font-family: var(--fonte-Destaque);
+}
+
+h2 > a:hover {
+    color: rgb(124, 124, 126);
+}
+
 main p {
     font-family: var(--fonte-Texto);
     max-width: 800px;
@@ -88,18 +103,10 @@ main ul {
     margin-left: 30px;
     padding-left: 40px;
 }
+
 main fieldset {
     max-width: 800px;
     margin: auto;
-}
-/* Configuração formulário */
-
-main fieldset {
-    padding: 10px;
-}
-
-main legend {
-    padding: 7px;
 }
 
 /* Configuração Footer*/
