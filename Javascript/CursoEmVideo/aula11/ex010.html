@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EH MOLE</title>
+</head>
+<body>
+    <h1>Consultar multas</h1>
+    Velocidade do veículo: <input type="number" name="txtVelocidade" id="txtVelocidade"> Km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="resultado">
+
+    </div>
+    <script>
+        function calcular() {
+            var txtVelocidade = window.document.getElementById('txtVelocidade')
+            var resultado = window.document.querySelector('div#resultado')
+            var velocidade = Number(txtVelocidade.value)
+
+            resultado.innerHTML = `<p>Velocidade atual: <strong>${velocidade}Km/h</strong></p>`
+            if (velocidade > 60) {
+                resultado.innerHTML += `<p><strong>MULTADO</strong> por excesso de velocidade</p>`
+            }
+            resultado.innerHTML += `<p>Dirija com sinto de segurança</p>`
+        }
+
+    </script>
+</body>
+</html>
