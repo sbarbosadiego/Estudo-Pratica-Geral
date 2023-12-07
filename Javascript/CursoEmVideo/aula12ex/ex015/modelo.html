@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Modelo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div class="centraliza">
+            <p>Ano de Nascimento:
+                <input type="number" name="txtAno" id="txtAno" min="1900">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radioSexo" id="masculino" checked>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="radioSexo" id="feminino">
+                <label for="feminino">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="resultado">
+            <p class="centraliza">
+                Preencha os campos acima.
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Diego Barbosa</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
