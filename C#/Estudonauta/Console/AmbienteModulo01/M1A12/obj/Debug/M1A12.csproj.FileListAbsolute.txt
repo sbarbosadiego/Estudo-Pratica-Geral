@@ -1,0 +1,7 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A12\bin\Debug\M1A12.exe.config
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A12\bin\Debug\M1A12.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A12\bin\Debug\M1A12.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A12\obj\Debug\M1A12.csproj.AssemblyReference.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A12\obj\Debug\M1A12.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A12\obj\Debug\M1A12.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\Console\AmbienteModulo01\M1A12\obj\Debug\M1A12.pdb
