@@ -1,0 +1,10 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\bin\Debug\ex04.exe.config
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\bin\Debug\ex04.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\bin\Debug\ex04.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\obj\Debug\ex04.csproj.AssemblyReference.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\obj\Debug\ex04.Form1.resources
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\obj\Debug\ex04.Properties.Resources.resources
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\obj\Debug\ex04.csproj.GenerateResource.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\obj\Debug\ex04.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\obj\Debug\ex04.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\ExerciciosM1\ex04\obj\Debug\ex04.pdb
