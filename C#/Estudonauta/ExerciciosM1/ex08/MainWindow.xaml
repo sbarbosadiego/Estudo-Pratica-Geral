@@ -1,0 +1,18 @@
+﻿<Window x:Class="ex08.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ex08"
+        mc:Ignorable="d"
+        Title="Sorteador" Height="338" Width="287" FontSize="24" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Início:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="txtInicio" HorizontalAlignment="Left" Margin="85,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" MaxWidth="170" MaxHeight="34" Height="34"/>
+        <Label Content="Fim:" HorizontalAlignment="Left" Margin="27,73,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFim" HorizontalAlignment="Left" Margin="85,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" MaxWidth="170" MaxHeight="34"/>
+        <Button x:Name="btnSortear" Content="Sortear" HorizontalAlignment="Left" Margin="16,139,0,0" VerticalAlignment="Top" Width="239" Click="btnSortear_Click"/>
+        <Label x:Name="lblResultado" Content="" HorizontalAlignment="Center" Margin="28,192,0,0" VerticalAlignment="Top" Width="215" Height="96" FontSize="22" Visibility="Hidden" HorizontalContentAlignment="Center"/>
+
+    </Grid>
+</Window>

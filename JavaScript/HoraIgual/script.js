@@ -30,7 +30,7 @@ function verificar() {
                 resultado.innerHTML = '<strong>06:06</strong><br>Fará o impossível por seu amor.'
                 break
             case 7:
-                resultado.innerHTML = '<strong>07:07</strong><br>alguém gosta muito de você.'
+                resultado.innerHTML = '<strong>07:07</strong><br>Alguém gosta muito de você.'
                 break
             case 8:
                 resultado.innerHTML = '<strong>08:08</strong><br>O dono(a) do seu coração pensou muito em você hoje.'
@@ -45,7 +45,7 @@ function verificar() {
                 resultado.innerHTML = '<strong>11:11</strong><br>Receberá um recado em breve.'
                 break
             case 12:
-                resultado.innerHTML = '<strong>12:12</strong><br>Coisa boas vão acontecer.'
+                resultado.innerHTML = '<strong>12:12</strong><br>Coisas boas vão acontecer.'
                 break
             case 13:
                 resultado.innerHTML = '<strong>13:13</strong><br>Você terá um namorado(a) lindo(a).'
@@ -78,7 +78,7 @@ function verificar() {
                 resultado.innerHTML = '<strong>22:22</strong><br>Alguém sonhou com você na noite passada.'
                 break
             case 23:
-                resultado.innerHTML = '<strong>23:23</strong><br>Jamais será traída(o).'
+                resultado.innerHTML = '<strong>23:23</strong><br>Jamais será traído(a).'
                 break
             default:
                 resultado.innerHTML = 'Digite um hora válida.'
