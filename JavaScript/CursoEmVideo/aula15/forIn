@@ -1,0 +1,13 @@
+
+var numero = [10, 20, 30 , 40, 50, 60, 70]
+
+// Mesmo funcionamente do for each
+for (var posicao in numero) {
+    console.log(numero[posicao])
+}
+
+// Mostra a posição do elemento que está sendo procurado dentro de um array
+console.log(numero.indexOf(20))
+
+// Caso não seja encontrado o valor dentro do array é retornado um -1
+console.log(numero.indexOf(80))
