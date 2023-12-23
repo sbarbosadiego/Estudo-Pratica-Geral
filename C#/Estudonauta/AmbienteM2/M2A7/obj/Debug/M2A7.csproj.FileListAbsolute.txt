@@ -1,0 +1,7 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\AmbienteM2\M2A7\bin\Debug\M2A7.exe.config
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\AmbienteM2\M2A7\bin\Debug\M2A7.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\AmbienteM2\M2A7\bin\Debug\M2A7.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\AmbienteM2\M2A7\obj\Debug\M2A7.csproj.AssemblyReference.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\AmbienteM2\M2A7\obj\Debug\M2A7.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\AmbienteM2\M2A7\obj\Debug\M2A7.exe
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Estudonauta\AmbienteM2\M2A7\obj\Debug\M2A7.pdb
