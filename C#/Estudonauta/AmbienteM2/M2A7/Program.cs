@@ -26,7 +26,8 @@ namespace M2A7
                 if (valor[0] > valor[1])
                 {
                     Console.WriteLine($"O número {valor[0]} é maior que o número {valor[1]}");
-                } else
+                } 
+                else if (valor[1] > valor[0])
                 {
                     Console.WriteLine($"O número {valor[1]} é maior que o número {valor[0]}");
                 }
