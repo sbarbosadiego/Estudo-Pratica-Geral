@@ -26,12 +26,17 @@ namespace M2A7
                 if (valor[0] > valor[1])
                 {
                     Console.WriteLine($"O número {valor[0]} é maior que o número {valor[1]}");
+                    Console.WriteLine($"A subtração de {valor[0]} - {valor[1]} = {valor[0] - valor[1]}");
                 } 
                 else if (valor[1] > valor[0])
                 {
                     Console.WriteLine($"O número {valor[1]} é maior que o número {valor[0]}");
+                    Console.WriteLine($"A subtração de {valor[1]} - {valor[0]} = {valor[1] - valor[0]}");
                 }
-            } 
+            }
+
+            Console.WriteLine($"A soma de {valor[0]} + {valor[1]} = {valor[0] + valor[1]}");
+            
 
             Console.ReadKey();
         }
