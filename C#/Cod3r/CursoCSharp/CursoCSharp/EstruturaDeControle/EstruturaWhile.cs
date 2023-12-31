@@ -8,7 +8,7 @@ namespace CursoCSharp.EstruturaDeControle
 {
     internal class EstruturaWhile
     {
-        public static void Excecutar()
+        public static void Executar()
         {
             int valor = 0;
             Random random = new Random();
@@ -24,10 +24,21 @@ namespace CursoCSharp.EstruturaDeControle
                 string entrada = Console.ReadLine();
                 int.TryParse(entrada, out valor);
 
+                tentativas++;
+                tentativasRestantes--;
+
                 if (numeroSorteado == valor)
                 {
                     numeroEncontrado = true;
-                    Console.WriteLine($"Acertou em {tentativas}");
+                    Console.WriteLine($"Acertou em {tentativas} tentativas");
+                } else if (valor > numeroSorteado)
+                {
+                    Console.WriteLine("Informe um valor menor que o digitado");
+                    Console.WriteLine($"Tentativas restantes {tentativasRestantes}");
+                } else
+                {
+                    Console.WriteLine("Informe um valor maior");
+                    Console.WriteLine($"Tentativas {tentativasRestantes}");
                 }
 
             }

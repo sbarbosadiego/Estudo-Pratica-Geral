@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CentralDeExercicios.cs" />
+    <Compile Include="EstruturaDeControle\EstruturaDoWhile.cs" />
     <Compile Include="EstruturaDeControle\EstruturaIf.cs" />
     <Compile Include="EstruturaDeControle\EstruturaSwitch.cs" />
     <Compile Include="EstruturaDeControle\EstruturaWhile.cs" />

@@ -64,3 +64,5 @@
 *.resharper/
 *.resharper/
 *.sln.docstates
+/Java/Unicesumar/Programacao-2/ContatosCSV/nbproject/private/
+/Java/Unicesumar/Programacao-2/ContatosCSV/build/
