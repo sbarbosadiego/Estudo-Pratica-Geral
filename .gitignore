@@ -66,3 +66,6 @@
 *.sln.docstates
 /Java/Unicesumar/Programacao-2/ContatosCSV/nbproject/private/
 /Java/Unicesumar/Programacao-2/ContatosCSV/build/
+/Java/Unicesumar/Programacao-2/SalvarContatos/nbproject/private/
+/Java/Unicesumar/Programacao-2/SalvarContatos/build/
+/Java/Unicesumar/Programacao-2/SalvarContatos/dist/
