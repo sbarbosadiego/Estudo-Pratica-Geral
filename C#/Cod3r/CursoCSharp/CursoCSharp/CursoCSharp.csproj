@@ -44,10 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CentralDeExercicios.cs" />
+    <Compile Include="ClassesEMetodos\Construtores.cs" />
+    <Compile Include="ClassesEMetodos\Membros.cs" />
+    <Compile Include="ClassesEMetodos\Pessoa.cs" />
     <Compile Include="EstruturaDeControle\EstruturaDoWhile.cs" />
+    <Compile Include="EstruturaDeControle\EstruturaForEach.cs" />
     <Compile Include="EstruturaDeControle\EstruturaIf.cs" />
     <Compile Include="EstruturaDeControle\EstruturaSwitch.cs" />
     <Compile Include="EstruturaDeControle\EstruturaWhile.cs" />
+    <Compile Include="EstruturaDeControle\UsandoBreak.cs" />
+    <Compile Include="EstruturaDeControle\UsandoContinue.cs" />
     <Compile Include="Fundamentos\Comentarios.cs" />
     <Compile Include="Fundamentos\Conversoes.cs" />
     <Compile Include="Fundamentos\FormatandoNumero.cs" />

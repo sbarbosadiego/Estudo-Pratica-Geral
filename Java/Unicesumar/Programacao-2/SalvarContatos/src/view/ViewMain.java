@@ -1,7 +1,6 @@
 package view;
 
 import java.awt.Desktop;
-import java.awt.HeadlessException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -176,8 +175,9 @@ public class ViewMain extends javax.swing.JFrame {
 
         // Limpar a tabela antes de adicionar novas informações
         tabela.setNumRows(0);
-
-        try (FileInputStream fileInputStream = new FileInputStream(path); InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream); BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
+        
+        // Uso de try-with-resources, garante que seja fechado os recursos, sem a necessidade de usar um método como close para cada um.
+        try (FileInputStream fileInputStream = new FileInputStream(path); InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream); BufferedReader bufferedReader = new BufferedReader(inputStreamReader);) {
 
             String linha;
             int contadorCliente = 1;
@@ -202,8 +202,11 @@ public class ViewMain extends javax.swing.JFrame {
     public void ExportarContatos(File path) {
         DefaultTableModel tabela = (DefaultTableModel) jTableContatos.getModel();
         int rowCount = tabela.getRowCount();
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(path))) {
+        
+        /* Em importar contatos poderia ser feito sem o uso de try-with-resources, porém em exportar é necessário,
+        ** caso contrário o arquivo ficará em "edição" e ao fechar a aplicação para abrir, nada vai ter sido salvo
+        */
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(path));) {
             writer.write("Name;Mobile Phone");
             writer.newLine();
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using CursoCSharp.Fundamentos;
 using CursoCSharp.EstruturaDeControle;
+using CursoCSharp.ClassesEMetodos;
 
 namespace CursoCSharp
 {
@@ -25,10 +26,17 @@ namespace CursoCSharp
                 {"Operadore Ternário - Fundamentos", OperadorTernario.Executar},
                 
                 // Estrutura de Controle
-                {"Estrutura If/Else  - Estruturas de Controle", EstruturaIf.Executar},
+                {"Estrutura If/Else/For  - Estruturas de Controle", EstruturaIf.Executar},
                 {"Estrutura Switch  - Estruturas de Controle", EstruturaSwitch.Executar},
                 {"Estrutura While - Estruturas de Controle", EstruturaWhile.Executar},
-                {"Estrutura Do While - Estruturas de Controle", EstruturaDoWhile.Executar}
+                {"Estrutura Do While - Estruturas de Controle", EstruturaDoWhile.Executar},
+                {"Estrutura For Each - Estruturas de Controle", EstruturaForEach.Executar},
+                {"Utilizando o Break - Estruturas de Controle", UsandoBreak.Executar},
+                {"Utilizando o Continue - Estruturas de Controle", UsandoContinue.Executar},
+
+                // Classes e Métodos
+                {"Membros - Classes e Métodos", Membros.Executar},
+                {"Construtores - Classes e Métodos", Construtores.Executar}
             });
 
             central.SelecionarEExecutar();

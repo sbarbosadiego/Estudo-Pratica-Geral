@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CursoCSharp.ClassesEMetodos
+{
+    internal class Pessoa
+    {
+        public string Nome;
+        public int Idade;
+
+        public string Apresentar()
+        {
+            return string.Format($"{this.Nome} tem {this.Idade} anos");
+        }
+
+        public void ApresentarNoConsole()
+        {
+            Console.WriteLine(Apresentar());
+        }
+
+        public void Limpar()
+        {
+            this.Nome = "";
+            this.Idade = 0;
+        }
+
+    }
+}
