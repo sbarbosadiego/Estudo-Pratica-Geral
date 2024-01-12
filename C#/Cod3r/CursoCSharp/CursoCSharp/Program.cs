@@ -44,7 +44,8 @@ namespace CursoCSharp
                 {"Params - Classes e Métodos", Params.Executar},
                 {"Parametros Nomeados - Classes e Métodos", ParametrosNomeados.Executar},
                 {"Props - Classes e Métodos", Props.Executar},
-
+                {"Readonly - Classes e Métodos", ReadOnly.Executar},
+                {"Exemplo Enum - Classes e Métodos", ExemploEnum.Executar}
             });
 
             central.SelecionarEExecutar();
