@@ -22,14 +22,16 @@ namespace CursoCSharp.ClassesEMetodos
         public static void Executar()
         {
             SPonto pontoUm = new SPonto { X = 1, Y = 3};
-            SPonto copiaPontoUm = pontoUm; // Atribuição por valor
+            // Atribuição por valor
+            SPonto copiaPontoUm = pontoUm;
             pontoUm.X = 3;
 
             Console.WriteLine($"Ponto um X: {pontoUm.X}");
             Console.WriteLine($"Copia ponto um X: {copiaPontoUm.X}");
 
             CPonto pontoDois = new CPonto { X = 2,Y = 4};
-            CPonto copiaPontoDois = pontoDois; // Atribuição por referência
+            // Atribuição por referência
+            CPonto copiaPontoDois = pontoDois; 
             copiaPontoDois.X = 4;
 
             Console.WriteLine($"Ponto um X: {pontoDois.X}");
