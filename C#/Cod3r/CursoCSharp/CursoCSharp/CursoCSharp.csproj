@@ -53,12 +53,14 @@
     <Compile Include="ClassesEMetodos\MetodosComRetorno.cs" />
     <Compile Include="ClassesEMetodos\MetodosEstaticos.cs" />
     <Compile Include="ClassesEMetodos\ParametrosNomeados.cs" />
+    <Compile Include="ClassesEMetodos\ParametrosPorReferencia.cs" />
     <Compile Include="ClassesEMetodos\Params.cs" />
     <Compile Include="ClassesEMetodos\Pessoa.cs" />
     <Compile Include="ClassesEMetodos\Props.cs" />
     <Compile Include="ClassesEMetodos\ReadOnly.cs" />
     <Compile Include="ClassesEMetodos\Struct.cs" />
     <Compile Include="ClassesEMetodos\StrucVsClasse.cs" />
+    <Compile Include="ClassesEMetodos\ValorVsReferencia.cs" />
     <Compile Include="EstruturaDeControle\EstruturaDoWhile.cs" />
     <Compile Include="EstruturaDeControle\EstruturaForEach.cs" />
     <Compile Include="EstruturaDeControle\EstruturaIf.cs" />
