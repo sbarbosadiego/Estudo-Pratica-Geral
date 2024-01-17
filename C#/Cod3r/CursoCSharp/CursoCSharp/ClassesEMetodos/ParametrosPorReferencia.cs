@@ -13,8 +13,9 @@ namespace CursoCSharp.ClassesEMetodos
             numero += 1000;
         }
 
-        public static void AlterarOut(ref int numero)
+        public static void AlterarOut(out int numero)
         {
+            numero = 0;
             numero += 15;
         }
 
@@ -24,8 +25,7 @@ namespace CursoCSharp.ClassesEMetodos
             AlterarRef(ref a);
             Console.WriteLine(a);
 
-            int b = 2;
-            AlterarOut(ref b);
+            AlterarOut(out int b);
             Console.WriteLine(b);
         }
     }
