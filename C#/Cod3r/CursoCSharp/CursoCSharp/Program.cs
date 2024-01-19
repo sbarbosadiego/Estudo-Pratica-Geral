@@ -54,7 +54,9 @@ namespace CursoCSharp
                 {"Parâmetro com Valor Padrão - Classes e Métodos", ParametroPadrao.Executar},
 
                 // Coleções
-                {"Array - Coleções", Colecoes.Array.Executar}
+                {"Array - Coleções", Colecoes.Array.Executar},
+                {"List - Coleções", ColecoesList.Executar},
+                {"ArrayList - Coleções", ColecoesArrayList.Executar}
 
             });
 
