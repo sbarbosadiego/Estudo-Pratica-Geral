@@ -46,6 +46,8 @@
     <Compile Include="CentralDeExercicios.cs" />
     <Compile Include="ClassesEMetodos\AtributosEstaticos.cs" />
     <Compile Include="Colecoes\ColecoesArrayList.cs" />
+    <Compile Include="Colecoes\ColecoesQueue.cs" />
+    <Compile Include="Colecoes\ColecoesSet.cs" />
     <Compile Include="Colecoes\ColecoesList.cs" />
     <Compile Include="ClassesEMetodos\Construtores.cs" />
     <Compile Include="ClassesEMetodos\DesafioAtributo.cs" />
