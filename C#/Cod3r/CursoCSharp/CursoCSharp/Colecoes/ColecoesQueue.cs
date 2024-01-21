@@ -18,9 +18,11 @@ namespace CursoCSharp.Colecoes
             fila.Enqueue("Thoma Shelby");
             fila.Enqueue("Eh mole");
 
-            Console.WriteLine(fila.Peek()); // Mostra o primeiro da fila, sem remover o elemento
+            // Mostra o primeiro da fila, sem remover o elemento
+            Console.WriteLine(fila.Peek());
             Console.WriteLine(fila.Count());
-            Console.WriteLine(fila.Dequeue()); // Remove o elemento da fila
+            // Remove o elemento da fila
+            Console.WriteLine(fila.Dequeue()); 
             Console.WriteLine(fila.Count());
 
             foreach (var elemento in fila)
