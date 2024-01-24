@@ -13,8 +13,6 @@ namespace CursoCSharp.OO
             protected readonly int VelocidadeMaxima;
             private int VelocidadeAtual;
 
-            public Carro() { }
-
             public Carro(int velocidadeMaxima)
             {
                 VelocidadeMaxima = velocidadeMaxima;
@@ -35,7 +33,8 @@ namespace CursoCSharp.OO
                 return VelocidadeAtual;
             }
 
-            public int Acelerar()
+            // Virtual indica que o método pode ser subrescrito
+            public virtual int Acelerar()
             {
                 return AlterarVelocidade(5);
             }
@@ -49,11 +48,52 @@ namespace CursoCSharp.OO
         // Para herdar atributos e métodos utilizar o :
         public class Uno : Carro
         {
+            // No construtor da classe uso, pode ser chamado o construtor pai através do base
+            public Uno() : base(200) { }
+        }
 
+        public class Ferrari : Carro
+        {
+            public Ferrari() : base(350) { }
+
+            public override int Acelerar()
+            {
+                return AlterarVelocidade(15);
+            }
+
+            // Oculta o método da classe pai
+            public new int Frear()
+            {
+                return AlterarVelocidade(-15);
+            }
         }
 
         public static void Executar()
         {
+            Console.WriteLine("Uno ");
+            Uno carroUm = new Uno();
+            Ferrari carroDois = new Ferrari();
+            Carro CarroTres = new Ferrari();
+
+            Console.WriteLine(carroUm.Acelerar());
+            Console.WriteLine(carroUm.Acelerar());
+            Console.WriteLine(carroUm.Acelerar());
+            Console.WriteLine(carroUm.Frear());
+            Console.WriteLine(carroUm.Frear());
+            Console.WriteLine(carroUm.Frear());
+            Console.WriteLine(carroUm.Frear());
+
+            Console.WriteLine("Ferrari ");
+            Console.WriteLine(carroDois.Acelerar());
+            Console.WriteLine(carroDois.Acelerar());
+            Console.WriteLine(carroDois.Acelerar());
+            Console.WriteLine(carroDois.Frear());
+
+            Console.WriteLine("Ferrari com tipo Carro");
+            Console.WriteLine(CarroTres.Acelerar());
+            Console.WriteLine(CarroTres.Acelerar());
+            Console.WriteLine(CarroTres.Acelerar());
+            Console.WriteLine(CarroTres.Frear());
 
         }
     }
