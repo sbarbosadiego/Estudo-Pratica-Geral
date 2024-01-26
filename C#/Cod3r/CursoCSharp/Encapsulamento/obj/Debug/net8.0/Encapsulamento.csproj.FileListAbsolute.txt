@@ -1,0 +1,12 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\bin\Debug\net8.0\Encapsulamento.deps.json
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\bin\Debug\net8.0\Encapsulamento.dll
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\bin\Debug\net8.0\Encapsulamento.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\net8.0\Encapsulamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\net8.0\Encapsulamento.AssemblyInfoInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\net8.0\Encapsulamento.AssemblyInfo.cs
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\net8.0\Encapsulamento.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\net8.0\Encapsulamento.sourcelink.json
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\net8.0\Encapsulamento.dll
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\net8.0\refint\Encapsulamento.dll
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\net8.0\Encapsulamento.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\net8.0\ref\Encapsulamento.dll

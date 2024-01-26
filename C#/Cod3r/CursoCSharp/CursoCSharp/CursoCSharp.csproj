@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>CursoCSharp</RootNamespace>
     <AssemblyName>CursoCSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -87,12 +88,20 @@
     <Compile Include="Fundamentos\OperadorTernario.cs" />
     <Compile Include="Fundamentos\PrimeiroPrograma.cs" />
     <Compile Include="Fundamentos\VariaveisEConstantes.cs" />
+    <Compile Include="OO\ConstrutorThis.cs" />
+    <Compile Include="OO\Encapsulamento.cs" />
     <Compile Include="OO\Heranca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Encapsulamento\Encapsulamento.csproj">
+      <Project>{dc681220-9c6e-4227-8946-e4ce6ed8f22d}</Project>
+      <Name>Encapsulamento</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
