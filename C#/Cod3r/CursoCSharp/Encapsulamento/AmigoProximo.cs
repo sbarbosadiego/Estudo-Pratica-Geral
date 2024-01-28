@@ -13,6 +13,13 @@ namespace Encapsulamento
         public void MeusAcessos()
         {
             Console.WriteLine("Amigo Proximo");
+
+            Console.WriteLine(amiga.InfoPublica);
+            //Console.WriteLine(amiga.CorDoOlho);
+            Console.WriteLine(amiga.NumeroCelular);
+            Console.WriteLine(amiga.JeitoDeFalar);
+            //Console.WriteLine(amiga.SegredoFamilia);
+            //Console.WriteLine(amiga.UsaMuitoPhotoshop);
         }
     }
 }

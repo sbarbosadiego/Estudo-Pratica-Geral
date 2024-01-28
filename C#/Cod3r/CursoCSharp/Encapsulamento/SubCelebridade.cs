@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Encapsulamento
 {
-    internal class SubCelebridade
+    public class SubCelebridade
     {
         // Todos
         public string InfoPublica = "Tenho um instagram";
