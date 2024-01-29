@@ -1,0 +1,6 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\bin\Debug\Encapsulamento.dll
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\bin\Debug\Encapsulamento.pdb
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\Encapsulamento.csproj.AssemblyReference.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\Encapsulamento.csproj.CoreCompileInputs.cache
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\Encapsulamento.dll
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\C#\Cod3r\CursoCSharp\Encapsulamento\obj\Debug\Encapsulamento.pdb

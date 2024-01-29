@@ -99,7 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Encapsulamento\Encapsulamento.csproj">
-      <Project>{dc681220-9c6e-4227-8946-e4ce6ed8f22d}</Project>
+      <Project>{3168770a-77fb-48fc-a881-07666c0823c6}</Project>
       <Name>Encapsulamento</Name>
     </ProjectReference>
   </ItemGroup>
