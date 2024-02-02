@@ -21,7 +21,6 @@ namespace CursoCSharp.MetodosEFuncoes
             Console.WriteLine(subtracao(5, 5));
             Console.WriteLine(multiplicacao(5, 5));
 
-
         }
     }
 }
