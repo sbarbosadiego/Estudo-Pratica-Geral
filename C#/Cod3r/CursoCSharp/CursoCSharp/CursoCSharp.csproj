@@ -88,11 +88,14 @@
     <Compile Include="Fundamentos\OperadorTernario.cs" />
     <Compile Include="Fundamentos\PrimeiroPrograma.cs" />
     <Compile Include="Fundamentos\VariaveisEConstantes.cs" />
+    <Compile Include="MetodosEFuncoes\DelegatesComoParametros.cs" />
+    <Compile Include="MetodosEFuncoes\MetodosDeExtensao.cs" />
     <Compile Include="MetodosEFuncoes\UsandoDelegate.cs" />
     <Compile Include="MetodosEFuncoes\ExemploLambda.cs" />
     <Compile Include="MetodosEFuncoes\LambdaDelegate.cs" />
     <Compile Include="OO\AbstratoClasse.cs" />
     <Compile Include="OO\ConstrutorThis.cs" />
+    <Compile Include="MetodosEFuncoes\DelegateFuncaoAnonima.cs" />
     <Compile Include="OO\Encapsulamento.cs" />
     <Compile Include="OO\Heranca.cs" />
     <Compile Include="OO\Interface.cs" />
