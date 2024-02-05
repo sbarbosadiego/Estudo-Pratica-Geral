@@ -78,6 +78,7 @@
     <Compile Include="EstruturaDeControle\EstruturaWhile.cs" />
     <Compile Include="EstruturaDeControle\UsandoBreak.cs" />
     <Compile Include="EstruturaDeControle\UsandoContinue.cs" />
+    <Compile Include="Excecoes\ExcecoesPersonalizadas.cs" />
     <Compile Include="Excecoes\PrimeiraExcecao.cs" />
     <Compile Include="Fundamentos\Comentarios.cs" />
     <Compile Include="Fundamentos\Conversoes.cs" />
