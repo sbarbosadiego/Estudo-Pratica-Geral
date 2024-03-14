@@ -1,0 +1,1 @@
+C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\Rust\resolution_2\target\debug\resolution_2.exe: C:\Users\di_an\OneDrive\Documentos\GitHub\Estudo-Pratica-Geral\Rust\resolution_2\src\main.rs
