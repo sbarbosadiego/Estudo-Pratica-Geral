@@ -64,6 +64,8 @@
 *.resharper/
 *.resharper/
 *.sln.docstates
+
+# Outros
 /Java/Unicesumar/Programacao-2/ContatosCSV/nbproject/private/
 /Java/Unicesumar/Programacao-2/ContatosCSV/build/
 /Java/Unicesumar/Programacao-2/SalvarContatos/nbproject/private/
@@ -71,3 +73,52 @@
 /Java/Unicesumar/Programacao-2/SalvarContatos/dist/
 /Java/Unicesumar/Programacao-3/NewFolder/JavaApplication1/nbproject/private/
 /Java/Unicesumar/Programacao-3/NewFolder/JavaApplication1/build/
+
+# Arquivos executáveis
+/target/
+
+# Arquivos de compilação
+Cargo.lock
+*.rlib
+*.rmeta
+
+# Arquivos de dependência gerados
+/vendor/
+Cargo.toml.orig
+Cargo.swp
+
+# Documentação gerada
+/target/doc/
+
+# Arquivos de configuração de ambiente
+/.rustc_info.json
+
+# Cache de dependências
+/.cargo/
+
+# Arquivos de logs e debug
+**/*.rs.bk
+**/*.rs.bk2
+**/*.bk
+**/*.bk2
+
+# Arquivos temporários
+**/*.orig
+**/*.rej
+
+# Arquivos gerados pela IDE
+/.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Diretórios de saída do sistema de construção
+build/
+
+# Outros arquivos de ambiente local
+*.env
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
